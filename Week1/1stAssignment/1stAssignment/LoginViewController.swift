@@ -9,27 +9,57 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    // MARK: - IBOutlet
+    
     @IBOutlet weak var userIdTextField: UITextField!
     @IBOutlet weak var userPwdTextField: UITextField!
     
     @IBOutlet weak var findPwdButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var loginButton: BaseButton!
+    
+    // MARK: - viewDidLoad()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setup()
     }
     
-    @IBAction func findPwdButtonClicked(_ sender: UIButton) {
+    // MARK: - func
+    
+    func setup() {
+
+        userIdTextField.addAction(UIAction(handler: textHandler), for: .editingChanged)
+        userPwdTextField.addAction(UIAction(handler: textHandler), for: .editingChanged)
         
-        print("비번 찾는 뷰")
+        userIdTextField.clearButtonMode = .whileEditing
+        
+        loginButton.isEnabled = false
+        loginButton.setTitle("로그인", for: .normal)
+        self.navigationItem.backBarButtonItem?.image = UIImage(named: "backButton")
+        
     }
     
-    @IBAction func loginButtonClicked(_ sender: UIButton) {
+    // 방법1. addAction 
+    func textHandler(_ a: UIAction) -> Void {
+        if userIdTextField.text!.isEmpty || userPwdTextField.text!.isEmpty  {
+            self.loginButton.isEnabled = false
+        } else {
+            self.loginButton.isEnabled = true
+        }
+    }
+    
+    // MARK: - IBAction
+    
+    @IBAction func findPwdButtonClicked(_ sender: UIButton) {
         
-        print("로그인 후 화면")
+        print("비번 찾기 클릭")
+    }
+    
+    @IBAction func loginButtonClicked(_ sender: BaseButton) {
+        
+        print("로그인 클릭")
         
 //        guard let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController") as? MainViewController else { return }
 //
@@ -37,15 +67,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signupButtonClicked(_ sender: UIButton) {
-        
+
         guard let signupVC = self.storyboard?.instantiateViewController(withIdentifier: "SignupNameViewController") as? SignupNameViewController else { return }
         
         self.navigationController?.pushViewController(signupVC, animated: true)
     }
-    
-    func setup() {
-        
-        
-        
-    }
 }
+
+

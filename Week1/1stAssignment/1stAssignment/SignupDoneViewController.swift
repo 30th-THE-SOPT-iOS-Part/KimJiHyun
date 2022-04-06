@@ -11,21 +11,31 @@ class SignupDoneViewController: UIViewController {
     
     var userName: String?
     
+    // MARK: - IBOutlet
+    
     @IBOutlet weak var welcomeLabel: UILabel!
-    @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var doneButton: BaseButton!
+    
+    // MARK: - viewDidLoad()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setup()
+        if let userName = userName {
+            welcomeLabel.text = "\(userName)님 Instagram에 오신 것을 환영합니다"
+        }
+        
+        doneButton.setTitle("완료하기", for: .normal)
     }
     
-    @IBAction func doneButtonClicked(_ sender: UIButton) {
+    // MARK: - IBAction
+    
+    @IBAction func doneButtonClicked(_ sender: BaseButton) {
         
-        self.navigationController?.popToRootViewController(animated: true)
-    }
-
-    func setup() {
+        guard let presentingVC = self.presentingViewController as? UINavigationController else { return }
         
+        self.dismiss(animated: true) {
+            presentingVC.popToRootViewController(animated: true)
+        }
     }
 }

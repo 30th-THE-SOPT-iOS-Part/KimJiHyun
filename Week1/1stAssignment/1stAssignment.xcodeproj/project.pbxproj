@@ -18,6 +18,8 @@
 		B8370B0527FC38FF0002BA23 /* SignupNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8370B0427FC38FF0002BA23 /* SignupNameViewController.swift */; };
 		B8370B0727FC39070002BA23 /* SignupPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8370B0627FC39070002BA23 /* SignupPwdViewController.swift */; };
 		B8370B0927FC39170002BA23 /* SignupDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8370B0827FC39170002BA23 /* SignupDoneViewController.swift */; };
+		B8370B0B27FD56C20002BA23 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8370B0A27FD56C20002BA23 /* UIView+Extension.swift */; };
+		B8370B0F27FD5A1A0002BA23 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8370B0E27FD5A1A0002BA23 /* BaseButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		B8370B0427FC38FF0002BA23 /* SignupNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupNameViewController.swift; sourceTree = "<group>"; };
 		B8370B0627FC39070002BA23 /* SignupPwdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPwdViewController.swift; sourceTree = "<group>"; };
 		B8370B0827FC39170002BA23 /* SignupDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupDoneViewController.swift; sourceTree = "<group>"; };
+		B8370B0A27FD56C20002BA23 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		B8370B0E27FD5A1A0002BA23 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 				B8370B0427FC38FF0002BA23 /* SignupNameViewController.swift */,
 				B8370B0627FC39070002BA23 /* SignupPwdViewController.swift */,
 				B8370B0827FC39170002BA23 /* SignupDoneViewController.swift */,
+				B8370B0A27FD56C20002BA23 /* UIView+Extension.swift */,
+				B8370B0E27FD5A1A0002BA23 /* BaseButton.swift */,
 			);
 			path = 1stAssignment;
 			sourceTree = "<group>";
@@ -156,7 +162,9 @@
 			files = (
 				B8370B0327FC38E80002BA23 /* LoginViewController.swift in Sources */,
 				B8370AF127FB374A0002BA23 /* ViewController.swift in Sources */,
+				B8370B0B27FD56C20002BA23 /* UIView+Extension.swift in Sources */,
 				B8370B0727FC39070002BA23 /* SignupPwdViewController.swift in Sources */,
+				B8370B0F27FD5A1A0002BA23 /* BaseButton.swift in Sources */,
 				B8370B0927FC39170002BA23 /* SignupDoneViewController.swift in Sources */,
 				B8370AED27FB374A0002BA23 /* AppDelegate.swift in Sources */,
 				B8370B0527FC38FF0002BA23 /* SignupNameViewController.swift in Sources */,
@@ -314,7 +322,7 @@
 				INFOPLIST_FILE = 1stAssignment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -342,7 +350,7 @@
 				INFOPLIST_FILE = 1stAssignment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
