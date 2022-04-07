@@ -22,6 +22,8 @@ class SignupNameViewController: UIViewController {
         userNameTextField.delegate = self
         nextButton.setTitle("다음", for: .normal)
         nextButton.isEnabled = false
+        
+        navigationItem.backButtonTitle = ""
     }
     
     // MARK: - IBAction

@@ -9,6 +9,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    var eyeButton = UIButton()
+    
     // MARK: - IBOutlet
     
     @IBOutlet weak var userIdTextField: UITextField!
@@ -24,21 +26,45 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         setup()
+        configure()
     }
     
     // MARK: - func
     
     func setup() {
+    
+        userIdTextField.clearButtonMode = .whileEditing
+        userPwdTextField.isSecureTextEntry = true
 
         userIdTextField.addAction(UIAction(handler: textHandler), for: .editingChanged)
         userPwdTextField.addAction(UIAction(handler: textHandler), for: .editingChanged)
         
-        userIdTextField.clearButtonMode = .whileEditing
+        eyeButton.addTarget(self, action: #selector(tapEyeButton), for: .touchUpInside)
+        
+        
         
         loginButton.isEnabled = false
-        loginButton.setTitle("로그인", for: .normal)
-        self.navigationItem.backBarButtonItem?.image = UIImage(named: "backButton")
+    }
+    
+    func configure() {
         
+        loginButton.setTitle("로그인", for: .normal)
+        
+        let tfHeight = userPwdTextField.bounds.height
+        let rightView = UIView(frame: CGRect(x: 0, y: 0, width: tfHeight, height: tfHeight))
+   
+        eyeButton.setBackgroundImage(UIImage(named: "shownEye"), for: .normal)
+        eyeButton.frame = CGRect(x: rightView.center.x - 12.5  ,y: rightView.center.y - 12.5, width: 25, height: 25)
+        
+        rightView.addSubview(eyeButton)
+        
+        userPwdTextField.rightView = rightView
+        userPwdTextField.rightViewMode = UITextField.ViewMode.always
+        
+        navigationController?.navigationBar.backIndicatorImage = UIImage(named: "backButton")
+        navigationController?.navigationBar.tintColor = .black
+        
+        navigationItem.backButtonTitle = ""
     }
     
     // 방법1. addAction 
@@ -48,6 +74,13 @@ class LoginViewController: UIViewController {
         } else {
             self.loginButton.isEnabled = true
         }
+    }
+    
+    @objc func tapEyeButton() {
+        
+        userPwdTextField.isSecureTextEntry == true ? eyeButton.setBackgroundImage(UIImage(named: "shownEye"), for: .normal) : eyeButton.setBackgroundImage(UIImage(named: "hiddenEye"), for: .normal)
+        
+        userPwdTextField.isSecureTextEntry = !userPwdTextField.isSecureTextEntry
     }
     
     // MARK: - IBAction
