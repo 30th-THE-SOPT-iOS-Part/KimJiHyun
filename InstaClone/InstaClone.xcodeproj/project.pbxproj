@@ -16,6 +16,12 @@
 		B85A6F362805BB7E00510B07 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B85A6F352805BB7E00510B07 /* SnapKit */; };
 		B85A6F392805BBC000510B07 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B85A6F382805BBC000510B07 /* RxCocoa */; };
 		B85A6F3B2805BBC000510B07 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B85A6F3A2805BBC000510B07 /* RxSwift */; };
+		B85A6F422805BE9A00510B07 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F412805BE9A00510B07 /* LoginView.swift */; };
+		B85A6F452805C1F700510B07 /* BasicTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F442805C1F700510B07 /* BasicTextField.swift */; };
+		B85A6F472805C2A000510B07 /* BasicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F462805C2A000510B07 /* BasicButton.swift */; };
+		B85A6F492805C2CE00510B07 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F482805C2CE00510B07 /* UIView+Extension.swift */; };
+		B85A6F4B2805CF6500510B07 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F4A2805CF6500510B07 /* LoginViewController.swift */; };
+		B8D0600B2805D93C009135B8 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D0600A2805D93C009135B8 /* UITextField+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +33,12 @@
 		B85A6F242805B41900510B07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B85A6F272805B41900510B07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B85A6F292805B41900510B07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B85A6F412805BE9A00510B07 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B85A6F442805C1F700510B07 /* BasicTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTextField.swift; sourceTree = "<group>"; };
+		B85A6F462805C2A000510B07 /* BasicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButton.swift; sourceTree = "<group>"; };
+		B85A6F482805C2CE00510B07 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		B85A6F4A2805CF6500510B07 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B8D0600A2805D93C009135B8 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,20 +74,21 @@
 		B85A6F1A2805B41800510B07 /* InstaClone */ = {
 			isa = PBXGroup;
 			children = (
-				B85A6F2F2805BAE900510B07 /* Base */,
+				B85A6F2F2805BAE900510B07 /* Source */,
 				B85A6F332805BB5D00510B07 /* Extension */,
+				B85A6F432805C0E500510B07 /* Custom */,
 				B85A6F312805BB1C00510B07 /* Resource */,
-				B85A6F302805BAFA00510B07 /* Supporting Files */,
 				B85A6F322805BB2800510B07 /* UI */,
 			);
 			path = InstaClone;
 			sourceTree = "<group>";
 		};
-		B85A6F2F2805BAE900510B07 /* Base */ = {
+		B85A6F2F2805BAE900510B07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				B85A6F402805BE5800510B07 /* Auth */,
 			);
-			path = Base;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		B85A6F302805BAFA00510B07 /* Supporting Files */ = {
@@ -91,6 +104,7 @@
 		B85A6F312805BB1C00510B07 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				B85A6F302805BAFA00510B07 /* Supporting Files */,
 				B85A6F242805B41900510B07 /* Assets.xcassets */,
 			);
 			path = Resource;
@@ -109,8 +123,60 @@
 		B85A6F332805BB5D00510B07 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				B85A6F482805C2CE00510B07 /* UIView+Extension.swift */,
+				B8D0600A2805D93C009135B8 /* UITextField+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		B85A6F3C2805BDF700510B07 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B85A6F412805BE9A00510B07 /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B85A6F3D2805BDFF00510B07 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B85A6F4A2805CF6500510B07 /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B85A6F3E2805BE0400510B07 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B85A6F3F2805BE1100510B07 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B85A6F402805BE5800510B07 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				B85A6F3F2805BE1100510B07 /* ViewModel */,
+				B85A6F3E2805BE0400510B07 /* Model */,
+				B85A6F3D2805BDFF00510B07 /* Controller */,
+				B85A6F3C2805BDF700510B07 /* View */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		B85A6F432805C0E500510B07 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				B85A6F442805C1F700510B07 /* BasicTextField.swift */,
+				B85A6F462805C2A000510B07 /* BasicButton.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,9 +259,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8D0600B2805D93C009135B8 /* UITextField+Extension.swift in Sources */,
+				B85A6F472805C2A000510B07 /* BasicButton.swift in Sources */,
+				B85A6F492805C2CE00510B07 /* UIView+Extension.swift in Sources */,
 				B85A6F202805B41800510B07 /* ViewController.swift in Sources */,
 				B85A6F1C2805B41800510B07 /* AppDelegate.swift in Sources */,
+				B85A6F4B2805CF6500510B07 /* LoginViewController.swift in Sources */,
+				B85A6F422805BE9A00510B07 /* LoginView.swift in Sources */,
 				B85A6F1E2805B41800510B07 /* SceneDelegate.swift in Sources */,
+				B85A6F452805C1F700510B07 /* BasicTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,7 +418,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B849TJY5N4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = InstaClone/Info.plist;
+				INFOPLIST_FILE = "InstaClone/Resource/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -374,7 +446,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B849TJY5N4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = InstaClone/Info.plist;
+				INFOPLIST_FILE = "InstaClone/Resource/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
