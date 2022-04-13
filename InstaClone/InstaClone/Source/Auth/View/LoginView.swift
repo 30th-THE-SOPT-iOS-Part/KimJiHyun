@@ -12,12 +12,12 @@ class LoginView: UIView {
     
     private var instaLogoImageView = UIImageView()
     
-    private var userIdTextField = BasicTextField()
-    private var userPwdTextField = BasicTextField()
+    var userIdTextField = BasicTextField()
+    var userPwdTextField = BasicTextField()
     
-    private var findPwdButton = UIButton()
+    var findPwdButton = UIButton()
     
-    private var loginButton = BasicButton()
+    var loginButton = BasicButton()
     
     private var signupGuideStackView: UIStackView = {
        
@@ -30,7 +30,7 @@ class LoginView: UIView {
     }()
     
     private var signupGuideLabel = UILabel()
-    private var signupButton = UIButton()
+    var signupButton = UIButton()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -74,7 +74,6 @@ class LoginView: UIView {
         signupButton.titleLabel?.font = .systemFont(ofSize: 12)
         
         [instaLogoImageView, userIdTextField, userPwdTextField, findPwdButton, loginButton, signupGuideStackView].forEach { self.addSubview($0) }
-        
         [signupGuideLabel, signupButton].forEach { signupGuideStackView.addArrangedSubview($0) }
     }
     
@@ -88,7 +87,6 @@ class LoginView: UIView {
         }
         
         userIdTextField.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
             make.top.equalTo(instaLogoImageView.snp.bottom).offset(40)
             make.height.equalTo(43)
             make.leading.trailing.equalToSuperview().inset(16)

@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window?.backgroundColor = .white
 
         //window?.rootViewController = UINavigationController(rootViewController: ResultRequestViewController())
-        window?.rootViewController = LoginViewController()
+        window?.rootViewController = SignupNameViewController()
         window?.makeKeyAndVisible()
     }
 
