@@ -7,10 +7,13 @@
 
 import UIKit
 
+import RxSwift
+import RxCocoa
+
 class SignupDoneViewController: UIViewController {
     
     let mainView = SignupDoneView()
-    // let viewModel =
+    let disposeBag = DisposeBag()
     
     override func loadView() {
         self.view = mainView
@@ -23,6 +26,14 @@ class SignupDoneViewController: UIViewController {
     
     func binding() {
         
+        mainView.doneButton.rx.tap
+            .subscribe { [weak self] _ in
+                guard let vc = self?.presentingViewController as? UINavigationController else { return }
+                self?.dismiss(animated: true, completion: {
+                    vc.popToRootViewController(animated: true)
+                })
+            }
+            .disposed(by: disposeBag)
     }
 }
 

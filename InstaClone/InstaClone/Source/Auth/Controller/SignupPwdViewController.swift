@@ -7,10 +7,13 @@
 
 import UIKit
 
+import RxSwift
+import RxCocoa
+
 class SignupPwdViewController: UIViewController {
     
     let mainView = SignupPwdView()
-    // let viewModel =
+    let disposeBag = DisposeBag()
     
     override func loadView() {
         self.view = mainView
@@ -23,5 +26,11 @@ class SignupPwdViewController: UIViewController {
     
     func binding() {
         
+        mainView.nextButton.rx.tap
+            .subscribe { [weak self] _ in
+                let vc = SignupDoneViewController()
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }
+            .disposed(by: disposeBag)
     }
 }

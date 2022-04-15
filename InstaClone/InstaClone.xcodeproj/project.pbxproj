@@ -22,7 +22,6 @@
 		B85A6F492805C2CE00510B07 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F482805C2CE00510B07 /* UIView+Extension.swift */; };
 		B85A6F4B2805CF6500510B07 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F4A2805CF6500510B07 /* LoginViewController.swift */; };
 		B8B308B828096AA4001C3056 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B308B728096AA4001C3056 /* LoginViewModel.swift */; };
-		B8B308BA28096AAD001C3056 /* SignupNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B308B928096AAD001C3056 /* SignupNameViewModel.swift */; };
 		B8D0600B2805D93C009135B8 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D0600A2805D93C009135B8 /* UITextField+Extension.swift */; };
 		B8D0600D2806D1FA009135B8 /* SignupNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D0600C2806D1FA009135B8 /* SignupNameViewController.swift */; };
 		B8D0600F2806D207009135B8 /* SignupPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D0600E2806D207009135B8 /* SignupPwdViewController.swift */; };
@@ -47,7 +46,6 @@
 		B85A6F482805C2CE00510B07 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		B85A6F4A2805CF6500510B07 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B8B308B728096AA4001C3056 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		B8B308B928096AAD001C3056 /* SignupNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupNameViewModel.swift; sourceTree = "<group>"; };
 		B8D0600A2805D93C009135B8 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		B8D0600C2806D1FA009135B8 /* SignupNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupNameViewController.swift; sourceTree = "<group>"; };
 		B8D0600E2806D207009135B8 /* SignupPwdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPwdViewController.swift; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				B8B308B728096AA4001C3056 /* LoginViewModel.swift */,
-				B8B308B928096AAD001C3056 /* SignupNameViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -293,7 +290,6 @@
 				B8D060112806D214009135B8 /* SignupNameView.swift in Sources */,
 				B85A6F202805B41800510B07 /* ViewController.swift in Sources */,
 				B8D060172807F577009135B8 /* SignupDoneView.swift in Sources */,
-				B8B308BA28096AAD001C3056 /* SignupNameViewModel.swift in Sources */,
 				B85A6F1C2805B41800510B07 /* AppDelegate.swift in Sources */,
 				B85A6F4B2805CF6500510B07 /* LoginViewController.swift in Sources */,
 				B8D060152807F55F009135B8 /* SignupDoneViewController.swift in Sources */,
