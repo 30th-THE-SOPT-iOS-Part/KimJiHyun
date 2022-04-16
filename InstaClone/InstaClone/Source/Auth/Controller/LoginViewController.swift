@@ -7,10 +7,14 @@
 
 import UIKit
 
+import RxSwift
+import RxCocoa
+
 class LoginViewController: UIViewController {
     
     let mainView = LoginView()
-    // let viewModel =
+    let viewModel = LoginViewModel()
+    let disposeBag = DisposeBag()
     
     override func loadView() {
         self.view = mainView
@@ -24,5 +28,14 @@ class LoginViewController: UIViewController {
     
     func binding() {
         
+        let input = LoginViewModel.Input(signupTap: mainView.signupButton.rx.tap)
+        let output = viewModel.transform(input: input)
+        
+        output.signupButtonTapped
+            .subscribe { [weak self] _ in
+                let vc = SignupNameViewController()
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }
+            .disposed(by: disposeBag)
     }
 }

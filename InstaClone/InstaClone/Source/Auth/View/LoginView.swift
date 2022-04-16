@@ -68,8 +68,7 @@ class LoginView: UIView {
         signupGuideLabel.textColor = .black
         signupGuideLabel.font = .systemFont(ofSize: 12)
         
-        signupButton.setTitleColor(.systemBlue, for: .normal
-        )
+        signupButton.setTitleColor(.systemBlue, for: .normal)
         signupButton.setTitle("가입하기", for: .normal)
         signupButton.titleLabel?.font = .systemFont(ofSize: 12)
         
