@@ -47,6 +47,7 @@ class SignupPwdView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        setUp()
         configureUI()
         constraints()
     }
@@ -55,7 +56,13 @@ class SignupPwdView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func setUp() {
+        nextButton.isEnabled = false
+    }
+    
     func configureUI() {
+        
+        self.backgroundColor = .white
         
         userPwdTextField.placeholder = "비밀번호"
         nextButton.setTitle("다음", for: .normal)

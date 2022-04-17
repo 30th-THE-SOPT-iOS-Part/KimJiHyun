@@ -1,5 +1,5 @@
 //
-//  SignupNameViewController.swift
+//  SignupIdViewController.swift
 //  InstaClone
 //
 //  Created by 김지현 on 2022/04/13.
@@ -10,9 +10,10 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class SignupNameViewController: UIViewController {
+class SignupIdViewController: UIViewController {
     
-    let mainView = SignupNameView()
+    let mainView = SignupIdView()
+    let viewModel = SignupIdViewModel()
     let disposeBag = DisposeBag()
     
     override func loadView() {
@@ -33,12 +34,23 @@ class SignupNameViewController: UIViewController {
     
     func binding() {
         
-        mainView.nextButton.rx.tap
+        let input = SignupIdViewModel.Input(
+            userIdText: mainView.userIdTextField.rx.text,
+            nextTap: mainView.nextButton.rx.tap
+        )
+        
+        let output = viewModel.transform(input: input)
+        
+        output.tapNextButton
             .subscribe { [weak self] _ in
                 let vc = SignupPwdViewController()
+                vc.userId = (self?.mainView.userIdTextField.text) ?? ""
                 self?.navigationController?.pushViewController(vc, animated: true)
             }
             .disposed(by: disposeBag)
         
+        output.nextButtonValid
+            .bind(to: mainView.nextButton.rx.isEnabled)
+            .disposed(by: disposeBag)
     }
 }

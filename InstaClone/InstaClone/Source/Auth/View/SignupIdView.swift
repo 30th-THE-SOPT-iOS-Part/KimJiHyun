@@ -1,5 +1,5 @@
 //
-//  SignupNameView.swift
+//  SignupIdView.swift
 //  InstaClone
 //
 //  Created by 김지현 on 2022/04/13.
@@ -9,7 +9,7 @@ import UIKit
 
 import SnapKit
 
-class SignupNameView: UIView {
+class SignupIdView: UIView {
     
     private var guideStackView: UIStackView = {
         var stackView = UIStackView()
@@ -20,7 +20,7 @@ class SignupNameView: UIView {
         return stackView
     }()
     
-    private var nameGuideLabel: UILabel = {
+    private var idGuideLabel: UILabel = {
         
         var label = UILabel()
         label.textAlignment = .center
@@ -29,7 +29,7 @@ class SignupNameView: UIView {
         label.font = .systemFont(ofSize: 25, weight: .medium)
         return label
     }()
-    private var nameSubGuideLabel: UILabel = {
+    private var idSubGuideLabel: UILabel = {
         
         var label = UILabel()
         label.numberOfLines = 0
@@ -40,13 +40,14 @@ class SignupNameView: UIView {
         return label
     }()
     
-    var userNameTextField = BasicTextField()
+    var userIdTextField = BasicTextField()
     
     var nextButton = BasicButton()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        setUp()
         configureUI()
         constraints()
     }
@@ -55,13 +56,19 @@ class SignupNameView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func setUp() {
+        nextButton.isEnabled = false
+    }
+    
     func configureUI() {
         
-        userNameTextField.placeholder = "사용자 이름"
+        self.backgroundColor = .white
+        
+        userIdTextField.placeholder = "사용자 이름"
         nextButton.setTitle("다음", for: .normal)
         
-        [guideStackView, userNameTextField, nextButton].forEach { self.addSubview($0) }
-        [nameGuideLabel, nameSubGuideLabel].forEach { guideStackView.addArrangedSubview($0) }
+        [guideStackView, userIdTextField, nextButton].forEach { self.addSubview($0) }
+        [idGuideLabel, idSubGuideLabel].forEach { guideStackView.addArrangedSubview($0) }
     }
     
     func constraints() {
@@ -72,14 +79,14 @@ class SignupNameView: UIView {
             make.width.equalToSuperview().multipliedBy(0.8)
         }
         
-        userNameTextField.snp.makeConstraints { make in
+        userIdTextField.snp.makeConstraints { make in
             make.top.equalTo(guideStackView.snp.bottom).offset(30)
             make.height.equalTo(43)
             make.leading.trailing.equalToSuperview().inset(16)
         }
         
         nextButton.snp.makeConstraints { make in
-            make.top.equalTo(userNameTextField.snp.bottom).offset(24)
+            make.top.equalTo(userIdTextField.snp.bottom).offset(24)
             make.height.equalTo(50)
             make.leading.trailing.equalToSuperview().inset(16)
         }

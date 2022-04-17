@@ -21,9 +21,13 @@ final class BasicButton: UIButton {
     
     func configureUI() {
         self.titleLabel?.font = .systemFont(ofSize: 16, weight: .medium)
-        self.setTitleColor(.white, for: .normal)
-        self.backgroundColor = .systemBlue
         self.setBorderColorAndRadius(cornerRadius: 4)
+        self.setTitleColor(.white, for: .normal)
     }
-
+    
+    override var isEnabled: Bool {
+        didSet {
+            self.isEnabled ? (self.backgroundColor = .systemBlue) : (self.backgroundColor = .systemGray5)
+        }
+    }
 }

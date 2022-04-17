@@ -77,9 +77,13 @@ class LoginView: UIView {
         userPwdTextField.isSecureTextEntry = true
         
         userPwdTextField.rightViewMode = .always
+        
+        loginButton.isEnabled = false
     }
     
     func configureUI() {
+        
+        self.backgroundColor = .white
   
         userPwdTextField.rightView = tfRightView
     

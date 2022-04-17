@@ -28,12 +28,20 @@ class LoginViewController: UIViewController {
     
     func binding() {
         
-        let input = LoginViewModel.Input(signupTap: mainView.signupButton.rx.tap)
+        let input = LoginViewModel.Input(
+            userIdText: mainView.userIdTextField.rx.text.orEmpty,
+            userPwdText: mainView.userPwdTextField.rx.text.orEmpty,
+            signupTap: mainView.signupButton.rx.tap)
+        
         let output = viewModel.transform(input: input)
         
-        output.signupButtonTapped
+        output.nextButtonValid
+            .bind(to: mainView.loginButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+        
+        output.tapSignupButton
             .subscribe { [weak self] _ in
-                let vc = SignupNameViewController()
+                let vc = SignupIdViewController()
                 self?.navigationController?.pushViewController(vc, animated: true)
             }
             .disposed(by: disposeBag)

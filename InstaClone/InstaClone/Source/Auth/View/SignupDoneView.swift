@@ -20,7 +20,7 @@ class SignupDoneView: UIView {
         return stackView
     }()
     
-    private var welcomeGuideLabel: UILabel = {
+    var welcomeGuideLabel: UILabel = {
         
         var label = UILabel()
         label.numberOfLines = 0
@@ -56,7 +56,10 @@ class SignupDoneView: UIView {
     
     func configureUI() {
         
+        self.backgroundColor = .white
+        
         doneButton.setTitle("완료하기", for: .normal)
+        doneButton.isEnabled = true
         
         [guideStackView, doneButton].forEach { self.addSubview($0) }
         [welcomeGuideLabel, welcomeSubGuideLabel].forEach { guideStackView.addArrangedSubview($0) }

@@ -15,6 +15,12 @@ class SignupDoneViewController: UIViewController {
     let mainView = SignupDoneView()
     let disposeBag = DisposeBag()
     
+    var userId: String = "" {
+        didSet {
+            mainView.welcomeGuideLabel.text = "\(userId)님, Instagram에 오신 것을 환영합니다"
+        }
+    }
+    
     override func loadView() {
         self.view = mainView
     }
