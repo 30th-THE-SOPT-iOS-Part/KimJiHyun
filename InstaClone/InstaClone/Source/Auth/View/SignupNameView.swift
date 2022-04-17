@@ -36,7 +36,7 @@ class SignupNameView: UIView {
         label.textAlignment = .center
         label.text = "새 계정에 사용할 사용자 이름을 선택하세요. 나중에 언제든지 변경할 수 있습니다."
         label.textColor = .black
-        label.font = .systemFont(ofSize: 11, weight: .regular)
+        label.font = .systemFont(ofSize: 12, weight: .regular)
         return label
     }()
     
@@ -47,17 +47,12 @@ class SignupNameView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setUp()
         configureUI()
         constraints()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    func setUp() {
-        
     }
     
     func configureUI() {
@@ -73,8 +68,8 @@ class SignupNameView: UIView {
         
         guideStackView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview().multipliedBy(0.4)
-            make.width.equalToSuperview().multipliedBy(0.7)
+            make.centerY.equalToSuperview().multipliedBy(0.2)
+            make.width.equalToSuperview().multipliedBy(0.8)
         }
         
         userNameTextField.snp.makeConstraints { make in

@@ -6,31 +6,58 @@
 //
 
 import UIKit
+
+import Then
 import SnapKit
 
 class LoginView: UIView {
     
-    private var instaLogoImageView = UIImageView()
+    private var instaLogoImageView = UIImageView().then {
+        $0.image = UIImage(named: "instagramLogo")
+    }
     
-    var userIdTextField = BasicTextField()
-    var userPwdTextField = BasicTextField()
+    var userIdTextField = BasicTextField().then {
+        $0.placeholder = "전화번호, 사용자 이름 또는 이메일"
+    }
+    var userPwdTextField = BasicTextField().then {
+        $0.placeholder = "비밀번호"
+    }
+    private var tfRightView = UIView().then {
+        $0.frame = CGRect(x: 0, y: 0, width: 43, height: 43)
+    }
+    var eyeButton = UIButton().then {
+        $0.setImage(UIImage(named: "shownEye"), for: .normal)
+        $0.setImage(UIImage(named: "hiddenEye"), for: .selected)
+    }
     
-    var findPwdButton = UIButton()
+    var findPwdButton = UIButton().then {
+        $0.setTitle("비밀번호를 잊으셨나요?", for: .normal)
+        $0.titleLabel?.font = .systemFont(ofSize: 11)
+        $0.setTitleColor(.systemBlue, for: .normal)
+    }
     
-    var loginButton = BasicButton()
+    var loginButton = BasicButton().then {
+        $0.setTitle("로그인", for: .normal)
+    }
     
-    private var signupGuideStackView: UIStackView = {
-       
-        var stackView = UIStackView()
-        stackView.alignment = .fill
-        stackView.distribution = .fillProportionally
-        stackView.axis = .horizontal
-        stackView.spacing = 6
-        return stackView
-    }()
+    private var signupGuideStackView = UIStackView().then {
+        $0.alignment = .fill
+        $0.distribution = .fillProportionally
+        $0.axis = .horizontal
+        $0.spacing = 6
+    }
     
-    private var signupGuideLabel = UILabel()
-    var signupButton = UIButton()
+    private var signupGuideLabel = UILabel().then {
+        $0.text = "계정이 없으신가요?"
+        $0.textColor = .black
+        $0.font = .systemFont(ofSize: 12)
+    }
+    
+    var signupButton = UIButton().then {
+        $0.setTitleColor(.systemBlue, for: .normal)
+        $0.setTitle("가입하기", for: .normal)
+        $0.titleLabel?.font = .systemFont(ofSize: 12)
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -46,34 +73,21 @@ class LoginView: UIView {
     
     func setUp() {
         
+        userIdTextField.clearButtonMode = .whileEditing
+        userPwdTextField.isSecureTextEntry = true
         
-        
+        userPwdTextField.rightViewMode = .always
     }
     
     func configureUI() {
-        
-        // 요게 ... setup에 가야 하나 ???
-        instaLogoImageView.image = UIImage(named: "instagramLogo")
-        
-        userIdTextField.placeholder = "전화번호, 사용자 이름 또는 이메일"
-        userPwdTextField.placeholder = "비밀번호"
-        
-        findPwdButton.setTitle("비밀번호를 잊으셨나요?", for: .normal)
-        findPwdButton.titleLabel?.font = .systemFont(ofSize: 11)
-        findPwdButton.setTitleColor(.systemBlue, for: .normal)
-        
-        loginButton.setTitle("로그인", for: .normal)
-        
-        signupGuideLabel.text = "계정이 없으신가요?"
-        signupGuideLabel.textColor = .black
-        signupGuideLabel.font = .systemFont(ofSize: 12)
-        
-        signupButton.setTitleColor(.systemBlue, for: .normal)
-        signupButton.setTitle("가입하기", for: .normal)
-        signupButton.titleLabel?.font = .systemFont(ofSize: 12)
-        
+  
+        userPwdTextField.rightView = tfRightView
+    
         [instaLogoImageView, userIdTextField, userPwdTextField, findPwdButton, loginButton, signupGuideStackView].forEach { self.addSubview($0) }
+        
         [signupGuideLabel, signupButton].forEach { signupGuideStackView.addArrangedSubview($0) }
+        
+        tfRightView.addSubview(eyeButton)
     }
     
     func constraints() {
@@ -97,6 +111,13 @@ class LoginView: UIView {
             make.leading.trailing.equalToSuperview().inset(16)
         }
         
+        eyeButton.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.width.height.equalTo(20)
+            make.trailing.equalToSuperview().inset(16)
+            // trailing 안써주면 rightView가 tf에 꽉차는 Issue
+        }
+        
         findPwdButton.snp.makeConstraints { make in
             make.top.equalTo(userPwdTextField.snp.bottom).offset(16)
             make.trailing.equalToSuperview().offset(-16)
@@ -112,8 +133,5 @@ class LoginView: UIView {
             make.centerX.equalToSuperview()
             make.top.equalTo(loginButton.snp.bottom).offset(40)
         }
-        
-        
-        
     }
 }

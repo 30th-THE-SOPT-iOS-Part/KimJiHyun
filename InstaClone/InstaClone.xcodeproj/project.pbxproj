@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B81D02EB280BC5EF0093A1A4 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81D02EA280BC5EF0093A1A4 /* UINavigationController+Extension.swift */; };
+		B81D02EE280BD4E70093A1A4 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = B81D02ED280BD4E70093A1A4 /* Then */; };
 		B85A6F1C2805B41800510B07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F1B2805B41800510B07 /* AppDelegate.swift */; };
 		B85A6F1E2805B41800510B07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F1D2805B41800510B07 /* SceneDelegate.swift */; };
 		B85A6F202805B41800510B07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F1F2805B41800510B07 /* ViewController.swift */; };
@@ -32,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B81D02EA280BC5EF0093A1A4 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		B85A6F182805B41800510B07 /* InstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85A6F1B2805B41800510B07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B85A6F1D2805B41800510B07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +66,7 @@
 				B85A6F3B2805BBC000510B07 /* RxSwift in Frameworks */,
 				B85A6F392805BBC000510B07 /* RxCocoa in Frameworks */,
 				B85A6F362805BB7E00510B07 /* SnapKit in Frameworks */,
+				B81D02EE280BD4E70093A1A4 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +143,7 @@
 			children = (
 				B85A6F482805C2CE00510B07 /* UIView+Extension.swift */,
 				B8D0600A2805D93C009135B8 /* UITextField+Extension.swift */,
+				B81D02EA280BC5EF0093A1A4 /* UINavigationController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 				B85A6F352805BB7E00510B07 /* SnapKit */,
 				B85A6F382805BBC000510B07 /* RxCocoa */,
 				B85A6F3A2805BBC000510B07 /* RxSwift */,
+				B81D02ED280BD4E70093A1A4 /* Then */,
 			);
 			productName = InstaClone;
 			productReference = B85A6F182805B41800510B07 /* InstaClone.app */;
@@ -252,6 +258,7 @@
 			packageReferences = (
 				B85A6F342805BB7E00510B07 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				B85A6F372805BBC000510B07 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				B81D02EC280BD4E70093A1A4 /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = B85A6F192805B41800510B07 /* Products */;
 			projectDirPath = "";
@@ -296,6 +303,7 @@
 				B85A6F422805BE9A00510B07 /* LoginView.swift in Sources */,
 				B85A6F1E2805B41800510B07 /* SceneDelegate.swift in Sources */,
 				B85A6F452805C1F700510B07 /* BasicTextField.swift in Sources */,
+				B81D02EB280BC5EF0093A1A4 /* UINavigationController+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +525,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B81D02EC280BD4E70093A1A4 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		B85A6F342805BB7E00510B07 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -536,6 +552,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B81D02ED280BD4E70093A1A4 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B81D02EC280BD4E70093A1A4 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
 		B85A6F352805BB7E00510B07 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B85A6F342805BB7E00510B07 /* XCRemoteSwiftPackageReference "SnapKit" */;

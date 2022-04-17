@@ -21,7 +21,14 @@ class SignupNameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureUI()
         binding()
+    }
+    
+    func configureUI() {
+        
+        navigationController?.initializeNavigationBarWithBackButton(navigationItem: self.navigationItem)
     }
     
     func binding() {

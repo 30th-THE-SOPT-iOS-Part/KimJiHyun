@@ -36,7 +36,7 @@ class SignupPwdView: UIView {
         label.textAlignment = .center
         label.text = "비밀번호를 저장할 수 있으므로 iCloud 기기에서 로그인 정보를 입력하지 않아도 됩니다."
         label.textColor = .black
-        label.font = .systemFont(ofSize: 11, weight: .regular)
+        label.font = .systemFont(ofSize: 12, weight: .regular)
         return label
     }()
     
@@ -47,17 +47,12 @@ class SignupPwdView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setUp()
         configureUI()
         constraints()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    func setUp() {
-        
     }
     
     func configureUI() {
@@ -73,8 +68,8 @@ class SignupPwdView: UIView {
         
         guideStackView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview().multipliedBy(0.4)
-            make.width.equalToSuperview().multipliedBy(0.7)
+            make.centerY.equalToSuperview().multipliedBy(0.2)
+            make.width.equalToSuperview().multipliedBy(0.8)
         }
         
         userPwdTextField.snp.makeConstraints { make in

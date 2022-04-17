@@ -21,7 +21,14 @@ class SignupPwdViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureUI()
         binding()
+    }
+    
+    func configureUI() {
+        
+        navigationController?.initializeNavigationBarWithBackButton(navigationItem: self.navigationItem)
     }
     
     func binding() {
@@ -29,7 +36,8 @@ class SignupPwdViewController: UIViewController {
         mainView.nextButton.rx.tap
             .subscribe { [weak self] _ in
                 let vc = SignupDoneViewController()
-                self?.navigationController?.pushViewController(vc, animated: true)
+                vc.modalPresentationStyle = .fullScreen
+                self?.present(vc, animated: true, completion: nil)
             }
             .disposed(by: disposeBag)
     }
