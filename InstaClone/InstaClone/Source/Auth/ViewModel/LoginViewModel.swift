@@ -15,11 +15,13 @@ class LoginViewModel {
     struct Input {
         let userIdText: ControlProperty<String>
         let userPwdText: ControlProperty<String>
+        let eyeTap: ControlEvent<Void>
         let signupTap: ControlEvent<Void>
     }
 
     struct Output {
         let nextButtonValid: Observable<Bool>
+        let tapEyeButton: ControlEvent<Void>
         let tapSignupButton: ControlEvent<Void>
     }
 
@@ -34,6 +36,6 @@ class LoginViewModel {
                 return id.count >= 2 && pwd.count >= 2
             }
         
-        return Output(nextButtonValid: valid, tapSignupButton: input.signupTap)
+        return Output(nextButtonValid: valid, tapEyeButton: input.eyeTap, tapSignupButton: input.signupTap)
     }
 }

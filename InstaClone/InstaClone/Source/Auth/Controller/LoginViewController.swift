@@ -31,6 +31,7 @@ class LoginViewController: UIViewController {
         let input = LoginViewModel.Input(
             userIdText: mainView.userIdTextField.rx.text.orEmpty,
             userPwdText: mainView.userPwdTextField.rx.text.orEmpty,
+            eyeTap: mainView.eyeButton.rx.tap,
             signupTap: mainView.signupButton.rx.tap)
         
         let output = viewModel.transform(input: input)
@@ -39,6 +40,15 @@ class LoginViewController: UIViewController {
             .bind(to: mainView.loginButton.rx.isEnabled)
             .disposed(by: disposeBag)
         
+        output.tapEyeButton
+            .subscribe { _ in
+                
+                self.mainView.eyeButton.isSelected ? (self.mainView.userPwdTextField.isSecureTextEntry = true) : (self.mainView.userPwdTextField.isSecureTextEntry = false)
+                
+                self.mainView.eyeButton.isSelected = !self.mainView.eyeButton.isSelected
+            }
+            .disposed(by: disposeBag)
+
         output.tapSignupButton
             .subscribe { [weak self] _ in
                 let vc = SignupIdViewController()
