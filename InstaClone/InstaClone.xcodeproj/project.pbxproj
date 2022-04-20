@@ -24,6 +24,12 @@
 		B85A6F472805C2A000510B07 /* BasicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F462805C2A000510B07 /* BasicButton.swift */; };
 		B85A6F492805C2CE00510B07 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F482805C2CE00510B07 /* UIView+Extension.swift */; };
 		B85A6F4B2805CF6500510B07 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F4A2805CF6500510B07 /* LoginViewController.swift */; };
+		B8A80F63280FF02F00AF8DEF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A80F62280FF02F00AF8DEF /* TabBarController.swift */; };
+		B8A80F65280FF0EB00AF8DEF /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A80F64280FF0EB00AF8DEF /* FeedViewController.swift */; };
+		B8A80F67280FF0F500AF8DEF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A80F66280FF0F500AF8DEF /* SearchViewController.swift */; };
+		B8A80F69280FF0FC00AF8DEF /* ReelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A80F68280FF0FC00AF8DEF /* ReelsViewController.swift */; };
+		B8A80F6B280FF10700AF8DEF /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A80F6A280FF10700AF8DEF /* ShopViewController.swift */; };
+		B8A80F6D280FF10C00AF8DEF /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A80F6C280FF10C00AF8DEF /* MypageViewController.swift */; };
 		B8B308B828096AA4001C3056 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B308B728096AA4001C3056 /* LoginViewModel.swift */; };
 		B8D0600B2805D93C009135B8 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D0600A2805D93C009135B8 /* UITextField+Extension.swift */; };
 		B8D0600D2806D1FA009135B8 /* SignupIdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D0600C2806D1FA009135B8 /* SignupIdViewController.swift */; };
@@ -50,6 +56,12 @@
 		B85A6F462805C2A000510B07 /* BasicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButton.swift; sourceTree = "<group>"; };
 		B85A6F482805C2CE00510B07 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		B85A6F4A2805CF6500510B07 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B8A80F62280FF02F00AF8DEF /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		B8A80F64280FF0EB00AF8DEF /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		B8A80F66280FF0F500AF8DEF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		B8A80F68280FF0FC00AF8DEF /* ReelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsViewController.swift; sourceTree = "<group>"; };
+		B8A80F6A280FF10700AF8DEF /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		B8A80F6C280FF10C00AF8DEF /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
 		B8B308B728096AA4001C3056 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B8D0600A2805D93C009135B8 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		B8D0600C2806D1FA009135B8 /* SignupIdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupIdViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +118,7 @@
 		B85A6F2F2805BAE900510B07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				B8A80F5D280FEE6B00AF8DEF /* Main */,
 				B85A6F402805BE5800510B07 /* Auth */,
 			);
 			path = Source;
@@ -208,6 +221,51 @@
 			path = Custom;
 			sourceTree = "<group>";
 		};
+		B8A80F5D280FEE6B00AF8DEF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B8A80F5E280FEE7200AF8DEF /* ViewModel */,
+				B8A80F5F280FEE8200AF8DEF /* Model */,
+				B8A80F60280FEE8600AF8DEF /* Controller */,
+				B8A80F61280FEE8B00AF8DEF /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B8A80F5E280FEE7200AF8DEF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B8A80F5F280FEE8200AF8DEF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B8A80F60280FEE8600AF8DEF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B8A80F62280FF02F00AF8DEF /* TabBarController.swift */,
+				B8A80F64280FF0EB00AF8DEF /* FeedViewController.swift */,
+				B8A80F66280FF0F500AF8DEF /* SearchViewController.swift */,
+				B8A80F68280FF0FC00AF8DEF /* ReelsViewController.swift */,
+				B8A80F6A280FF10700AF8DEF /* ShopViewController.swift */,
+				B8A80F6C280FF10C00AF8DEF /* MypageViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B8A80F61280FEE8B00AF8DEF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -292,6 +350,7 @@
 			files = (
 				B8D0600B2805D93C009135B8 /* UITextField+Extension.swift in Sources */,
 				B8D060132806D21E009135B8 /* SignupPwdView.swift in Sources */,
+				B8A80F65280FF0EB00AF8DEF /* FeedViewController.swift in Sources */,
 				B85A6F472805C2A000510B07 /* BasicButton.swift in Sources */,
 				B85A6F492805C2CE00510B07 /* UIView+Extension.swift in Sources */,
 				B8B308B828096AA4001C3056 /* LoginViewModel.swift in Sources */,
@@ -300,13 +359,18 @@
 				B8D060112806D214009135B8 /* SignupIdView.swift in Sources */,
 				B85A6F202805B41800510B07 /* ViewController.swift in Sources */,
 				B81D02F0280C15DD0093A1A4 /* SignupIdViewModel.swift in Sources */,
+				B8A80F63280FF02F00AF8DEF /* TabBarController.swift in Sources */,
 				B8D060172807F577009135B8 /* SignupDoneView.swift in Sources */,
 				B85A6F1C2805B41800510B07 /* AppDelegate.swift in Sources */,
+				B8A80F69280FF0FC00AF8DEF /* ReelsViewController.swift in Sources */,
+				B8A80F6D280FF10C00AF8DEF /* MypageViewController.swift in Sources */,
 				B85A6F4B2805CF6500510B07 /* LoginViewController.swift in Sources */,
+				B8A80F67280FF0F500AF8DEF /* SearchViewController.swift in Sources */,
 				B8D060152807F55F009135B8 /* SignupDoneViewController.swift in Sources */,
 				B85A6F422805BE9A00510B07 /* LoginView.swift in Sources */,
 				B85A6F1E2805B41800510B07 /* SceneDelegate.swift in Sources */,
 				B85A6F452805C1F700510B07 /* BasicTextField.swift in Sources */,
+				B8A80F6B280FF10700AF8DEF /* ShopViewController.swift in Sources */,
 				B81D02EB280BC5EF0093A1A4 /* UINavigationController+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
