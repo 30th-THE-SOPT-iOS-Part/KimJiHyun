@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B8370AED27FB374A0002BA23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8370AEC27FB374A0002BA23 /* AppDelegate.swift */; };
 		B8370AEF27FB374A0002BA23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8370AEE27FB374A0002BA23 /* SceneDelegate.swift */; };
-		B8370AF127FB374A0002BA23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8370AF027FB374A0002BA23 /* ViewController.swift */; };
 		B8370AF427FB374A0002BA23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8370AF227FB374A0002BA23 /* Main.storyboard */; };
 		B8370AF627FB374B0002BA23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8370AF527FB374B0002BA23 /* Assets.xcassets */; };
 		B8370AF927FB374B0002BA23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8370AF727FB374B0002BA23 /* LaunchScreen.storyboard */; };
@@ -24,20 +23,19 @@
 
 /* Begin PBXFileReference section */
 		B8370AE927FB374A0002BA23 /* InstaCloneBasic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaCloneBasic.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B8370AEC27FB374A0002BA23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B8370AEE27FB374A0002BA23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B8370AF027FB374A0002BA23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B8370AEC27FB374A0002BA23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../AppDelegate.swift; sourceTree = "<group>"; };
+		B8370AEE27FB374A0002BA23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../SceneDelegate.swift; sourceTree = "<group>"; };
 		B8370AF327FB374A0002BA23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B8370AF527FB374B0002BA23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8370AF827FB374B0002BA23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B8370AFA27FB374B0002BA23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B8370B0027FB37D20002BA23 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
-		B8370B0227FC38E80002BA23 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		B8370B0427FC38FF0002BA23 /* SignupNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupNameViewController.swift; sourceTree = "<group>"; };
-		B8370B0627FC39070002BA23 /* SignupPwdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPwdViewController.swift; sourceTree = "<group>"; };
-		B8370B0827FC39170002BA23 /* SignupDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupDoneViewController.swift; sourceTree = "<group>"; };
-		B8370B0A27FD56C20002BA23 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		B8370B0E27FD5A1A0002BA23 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		B8370AFA27FB374B0002BA23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../Info.plist; sourceTree = "<group>"; };
+		B8370B0027FB37D20002BA23 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Auth.storyboard; path = InstaCloneBasic/Auth.storyboard; sourceTree = SOURCE_ROOT; };
+		B8370B0227FC38E80002BA23 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
+		B8370B0427FC38FF0002BA23 /* SignupNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignupNameViewController.swift; path = ../SignupNameViewController.swift; sourceTree = "<group>"; };
+		B8370B0627FC39070002BA23 /* SignupPwdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignupPwdViewController.swift; path = ../SignupPwdViewController.swift; sourceTree = "<group>"; };
+		B8370B0827FC39170002BA23 /* SignupDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignupDoneViewController.swift; path = ../SignupDoneViewController.swift; sourceTree = "<group>"; };
+		B8370B0A27FD56C20002BA23 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "../UIView+Extension.swift"; sourceTree = "<group>"; };
+		B8370B0E27FD5A1A0002BA23 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseButton.swift; path = ../BaseButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,24 +68,79 @@
 		B8370AEB27FB374A0002BA23 /* InstaCloneBasic */ = {
 			isa = PBXGroup;
 			children = (
-				B8370AEC27FB374A0002BA23 /* AppDelegate.swift */,
-				B8370AEE27FB374A0002BA23 /* SceneDelegate.swift */,
-				B8370AF027FB374A0002BA23 /* ViewController.swift */,
-				B8370AF227FB374A0002BA23 /* Main.storyboard */,
+				B89F16C2281922BB00054695 /* UI */,
+				B89F16C02819226200054695 /* Resource */,
 				B8370AF527FB374B0002BA23 /* Assets.xcassets */,
-				B8370AF727FB374B0002BA23 /* LaunchScreen.storyboard */,
-				B8370AFA27FB374B0002BA23 /* Info.plist */,
+				B89F16BF2819224A00054695 /* Custom */,
+				B89F16BE2819223A00054695 /* Extension */,
+				B89F16BD281921C500054695 /* Main */,
+				B89F16BC281921AC00054695 /* Auth */,
+			);
+			name = InstaCloneBasic;
+			path = /Users/kimjihyeon/Documents/GitHub/KimJiHyun/InstaCloneBasic/InstaCloneBasic;
+			sourceTree = "<absolute>";
+		};
+		B89F16BC281921AC00054695 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
 				B8370B0027FB37D20002BA23 /* Auth.storyboard */,
 				B8370B0227FC38E80002BA23 /* LoginViewController.swift */,
 				B8370B0427FC38FF0002BA23 /* SignupNameViewController.swift */,
 				B8370B0627FC39070002BA23 /* SignupPwdViewController.swift */,
 				B8370B0827FC39170002BA23 /* SignupDoneViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		B89F16BD281921C500054695 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B8370AF227FB374A0002BA23 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B89F16BE2819223A00054695 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
 				B8370B0A27FD56C20002BA23 /* UIView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B89F16BF2819224A00054695 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
 				B8370B0E27FD5A1A0002BA23 /* BaseButton.swift */,
 			);
-			name = InstaCloneBasic;
-			path = /Users/kimjihyeon/Documents/GitHub/KimJiHyun/InstaCloneBasic/InstaCloneBasic;
-			sourceTree = "<absolute>";
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		B89F16C02819226200054695 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B89F16C12819226E00054695 /* Supporting Files */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		B89F16C12819226E00054695 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B8370AEC27FB374A0002BA23 /* AppDelegate.swift */,
+				B8370AEE27FB374A0002BA23 /* SceneDelegate.swift */,
+				B8370AFA27FB374B0002BA23 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B89F16C2281922BB00054695 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B8370AF727FB374B0002BA23 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -162,7 +215,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8370B0327FC38E80002BA23 /* LoginViewController.swift in Sources */,
-				B8370AF127FB374A0002BA23 /* ViewController.swift in Sources */,
 				B8370B0B27FD56C20002BA23 /* UIView+Extension.swift in Sources */,
 				B8370B0727FC39070002BA23 /* SignupPwdViewController.swift in Sources */,
 				B8370B0F27FD5A1A0002BA23 /* BaseButton.swift in Sources */,
