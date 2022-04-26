@@ -33,6 +33,15 @@ class SignupDoneViewController: UIViewController {
     func binding() {
         
         mainView.doneButton.rx.tap
+            .subscribe { _ in
+                let tabBarController = TabBarController()
+                guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {return}
+                windowScene.windows.first?.rootViewController = tabBarController
+                windowScene.windows.first?.makeKeyAndVisible()
+            }
+            .disposed(by: disposeBag)
+        
+        mainView.loginOtherAccountButton.rx.tap
             .subscribe { [weak self] _ in
                 guard let vc = self?.presentingViewController as? UINavigationController else { return }
                 self?.dismiss(animated: true, completion: {
@@ -40,6 +49,7 @@ class SignupDoneViewController: UIViewController {
                 })
             }
             .disposed(by: disposeBag)
+
     }
 }
 
