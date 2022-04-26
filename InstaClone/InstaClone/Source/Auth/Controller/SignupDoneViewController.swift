@@ -35,8 +35,11 @@ class SignupDoneViewController: UIViewController {
         mainView.doneButton.rx.tap
             .subscribe { _ in
                 let tabBarController = TabBarController()
-                guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {return}
-                windowScene.windows.first?.rootViewController = tabBarController
+                guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let window = windowScene.windows.first else {return}
+                
+                window.rootViewController = tabBarController
+                
+                UIView.transition(with: window, duration: 2, options: .transitionCrossDissolve, animations: {}, completion: nil)
                 windowScene.windows.first?.makeKeyAndVisible()
             }
             .disposed(by: disposeBag)
