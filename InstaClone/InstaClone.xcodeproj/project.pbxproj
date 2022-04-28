@@ -24,6 +24,9 @@
 		B85A6F472805C2A000510B07 /* BasicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F462805C2A000510B07 /* BasicButton.swift */; };
 		B85A6F492805C2CE00510B07 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F482805C2CE00510B07 /* UIView+Extension.swift */; };
 		B85A6F4B2805CF6500510B07 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F4A2805CF6500510B07 /* LoginViewController.swift */; };
+		B89F16C4281BCAA500054695 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F16C3281BCAA500054695 /* FeedView.swift */; };
+		B89F16C9281BCCFA00054695 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F16C8281BCCFA00054695 /* StoryCollectionViewCell.swift */; };
+		B89F16CB281BD6F000054695 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F16CA281BD6F000054695 /* FeedTableViewCell.swift */; };
 		B8A80F63280FF02F00AF8DEF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A80F62280FF02F00AF8DEF /* TabBarController.swift */; };
 		B8A80F65280FF0EB00AF8DEF /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A80F64280FF0EB00AF8DEF /* FeedViewController.swift */; };
 		B8A80F67280FF0F500AF8DEF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A80F66280FF0F500AF8DEF /* SearchViewController.swift */; };
@@ -56,6 +59,9 @@
 		B85A6F462805C2A000510B07 /* BasicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButton.swift; sourceTree = "<group>"; };
 		B85A6F482805C2CE00510B07 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		B85A6F4A2805CF6500510B07 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B89F16C3281BCAA500054695 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		B89F16C8281BCCFA00054695 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		B89F16CA281BD6F000054695 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		B8A80F62280FF02F00AF8DEF /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B8A80F64280FF0EB00AF8DEF /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		B8A80F66280FF0F500AF8DEF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				B85A6F2F2805BAE900510B07 /* Source */,
+				B89F16C5281BCAF500054695 /* Protocol */,
 				B85A6F332805BB5D00510B07 /* Extension */,
 				B85A6F432805C0E500510B07 /* Custom */,
 				B85A6F312805BB1C00510B07 /* Resource */,
@@ -221,6 +228,13 @@
 			path = Custom;
 			sourceTree = "<group>";
 		};
+		B89F16C5281BCAF500054695 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		B8A80F5D280FEE6B00AF8DEF /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +276,9 @@
 		B8A80F61280FEE8B00AF8DEF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B89F16C3281BCAA500054695 /* FeedView.swift */,
+				B89F16C8281BCCFA00054695 /* StoryCollectionViewCell.swift */,
+				B89F16CA281BD6F000054695 /* FeedTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -356,12 +373,15 @@
 				B8B308B828096AA4001C3056 /* LoginViewModel.swift in Sources */,
 				B8D0600F2806D207009135B8 /* SignupPwdViewController.swift in Sources */,
 				B8D0600D2806D1FA009135B8 /* SignupIdViewController.swift in Sources */,
+				B89F16C9281BCCFA00054695 /* StoryCollectionViewCell.swift in Sources */,
 				B8D060112806D214009135B8 /* SignupIdView.swift in Sources */,
 				B85A6F202805B41800510B07 /* ViewController.swift in Sources */,
+				B89F16C4281BCAA500054695 /* FeedView.swift in Sources */,
 				B81D02F0280C15DD0093A1A4 /* SignupIdViewModel.swift in Sources */,
 				B8A80F63280FF02F00AF8DEF /* TabBarController.swift in Sources */,
 				B8D060172807F577009135B8 /* SignupDoneView.swift in Sources */,
 				B85A6F1C2805B41800510B07 /* AppDelegate.swift in Sources */,
+				B89F16CB281BD6F000054695 /* FeedTableViewCell.swift in Sources */,
 				B8A80F69280FF0FC00AF8DEF /* ReelsViewController.swift in Sources */,
 				B8A80F6D280FF10C00AF8DEF /* MypageViewController.swift in Sources */,
 				B85A6F4B2805CF6500510B07 /* LoginViewController.swift in Sources */,

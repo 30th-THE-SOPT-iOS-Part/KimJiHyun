@@ -28,6 +28,14 @@ class LoginViewController: UIViewController {
     
     func binding() {
         
+        mainView.userIdTextField.rx.text
+            .orEmpty
+            .distinctUntilChanged()
+            .subscribe { text in
+                print(text)
+            }
+            .disposed(by: disposeBag)
+        
         let input = LoginViewModel.Input(
             userIdText: mainView.userIdTextField.rx.text.orEmpty,
             userPwdText: mainView.userPwdTextField.rx.text.orEmpty,
