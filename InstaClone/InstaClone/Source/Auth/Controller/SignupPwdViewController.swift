@@ -5,15 +5,9 @@
 //  Created by 김지현 on 2022/04/13.
 //
 
-import UIKit
-
-import RxSwift
-import RxCocoa
-
-class SignupPwdViewController: UIViewController {
+class SignupPwdViewController: BaseViewController {
     
     let mainView = SignupPwdView()
-    let disposeBag = DisposeBag()
 
     var userId: String = ""
     
@@ -28,12 +22,12 @@ class SignupPwdViewController: UIViewController {
         binding()
     }
     
-    func configureUI() {
+    override func configureUI() {
         
         navigationController?.initializeNavigationBarWithBackButton(navigationItem: self.navigationItem)
     }
     
-    func binding() {
+    override func binding() {
         
         mainView.userPwdTextField.rx.text
             .orEmpty

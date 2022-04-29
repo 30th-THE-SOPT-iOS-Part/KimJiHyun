@@ -5,15 +5,9 @@
 //  Created by 김지현 on 2022/04/14.
 //
 
-import UIKit
-
-import RxSwift
-import RxCocoa
-
-class SignupDoneViewController: UIViewController {
+class SignupDoneViewController: BaseViewController {
     
     let mainView = SignupDoneView()
-    let disposeBag = DisposeBag()
     
     var userId: String = "" {
         didSet {
@@ -30,7 +24,7 @@ class SignupDoneViewController: UIViewController {
         binding()
     }
     
-    func binding() {
+    override func binding() {
         
         mainView.doneButton.rx.tap
             .subscribe { _ in

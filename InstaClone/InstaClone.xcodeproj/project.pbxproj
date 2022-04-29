@@ -10,6 +10,8 @@
 		B81D02EB280BC5EF0093A1A4 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81D02EA280BC5EF0093A1A4 /* UINavigationController+Extension.swift */; };
 		B81D02EE280BD4E70093A1A4 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = B81D02ED280BD4E70093A1A4 /* Then */; };
 		B81D02F0280C15DD0093A1A4 /* SignupIdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81D02EF280C15DD0093A1A4 /* SignupIdViewModel.swift */; };
+		B83852DF281E4EDB0087166A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83852DE281E4EDB0087166A /* BaseViewController.swift */; };
+		B83852E3281E51140087166A /* CommonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83852E2281E51140087166A /* CommonViewModel.swift */; };
 		B85A6F1C2805B41800510B07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F1B2805B41800510B07 /* AppDelegate.swift */; };
 		B85A6F1E2805B41800510B07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F1D2805B41800510B07 /* SceneDelegate.swift */; };
 		B85A6F202805B41800510B07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F1F2805B41800510B07 /* ViewController.swift */; };
@@ -46,6 +48,8 @@
 /* Begin PBXFileReference section */
 		B81D02EA280BC5EF0093A1A4 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		B81D02EF280C15DD0093A1A4 /* SignupIdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupIdViewModel.swift; sourceTree = "<group>"; };
+		B83852DE281E4EDB0087166A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B83852E2281E51140087166A /* CommonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModel.swift; sourceTree = "<group>"; };
 		B85A6F182805B41800510B07 /* InstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85A6F1B2805B41800510B07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B85A6F1D2805B41800510B07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +97,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B83852E4281E51700087166A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B83852DE281E4EDB0087166A /* BaseViewController.swift */,
+				B83852E2281E51140087166A /* CommonViewModel.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		B85A6F0F2805B41800510B07 = {
 			isa = PBXGroup;
 			children = (
@@ -113,7 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				B85A6F2F2805BAE900510B07 /* Source */,
-				B89F16C5281BCAF500054695 /* Protocol */,
+				B83852E4281E51700087166A /* Common */,
 				B85A6F332805BB5D00510B07 /* Extension */,
 				B85A6F432805C0E500510B07 /* Custom */,
 				B85A6F312805BB1C00510B07 /* Resource */,
@@ -226,13 +239,6 @@
 				B85A6F462805C2A000510B07 /* BasicButton.swift */,
 			);
 			path = Custom;
-			sourceTree = "<group>";
-		};
-		B89F16C5281BCAF500054695 /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocol;
 			sourceTree = "<group>";
 		};
 		B8A80F5D280FEE6B00AF8DEF /* Main */ = {
@@ -370,7 +376,9 @@
 				B8A80F65280FF0EB00AF8DEF /* FeedViewController.swift in Sources */,
 				B85A6F472805C2A000510B07 /* BasicButton.swift in Sources */,
 				B85A6F492805C2CE00510B07 /* UIView+Extension.swift in Sources */,
+				B83852DF281E4EDB0087166A /* BaseViewController.swift in Sources */,
 				B8B308B828096AA4001C3056 /* LoginViewModel.swift in Sources */,
+				B83852E3281E51140087166A /* CommonViewModel.swift in Sources */,
 				B8D0600F2806D207009135B8 /* SignupPwdViewController.swift in Sources */,
 				B8D0600D2806D1FA009135B8 /* SignupIdViewController.swift in Sources */,
 				B89F16C9281BCCFA00054695 /* StoryCollectionViewCell.swift in Sources */,

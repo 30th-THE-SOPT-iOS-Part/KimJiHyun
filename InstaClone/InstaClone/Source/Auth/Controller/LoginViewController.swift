@@ -5,16 +5,10 @@
 //  Created by 김지현 on 2022/04/13.
 //
 
-import UIKit
-
-import RxSwift
-import RxCocoa
-
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
     
     let mainView = LoginView()
     let viewModel = LoginViewModel()
-    let disposeBag = DisposeBag()
     
     override func loadView() {
         self.view = mainView
@@ -26,7 +20,7 @@ class LoginViewController: UIViewController {
         binding()
     }
     
-    func binding() {
+    override func binding() {
         
         mainView.userIdTextField.rx.text
             .orEmpty

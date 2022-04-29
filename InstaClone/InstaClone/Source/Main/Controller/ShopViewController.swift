@@ -5,13 +5,10 @@
 //  Created by 김지현 on 2022/04/20.
 //
 
-import UIKit
-
-class ShopViewController: UIViewController {
+class ShopViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .green
     }
 }

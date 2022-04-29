@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class LoginViewModel {
+final class LoginViewModel: CommonViewModel {
     
     struct Input {
         let userIdText: ControlProperty<String>

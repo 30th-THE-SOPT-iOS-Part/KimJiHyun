@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class SignupIdViewModel {
+final class SignupIdViewModel: CommonViewModel {
     
     struct Input {
         let userIdText: ControlProperty<String?>
