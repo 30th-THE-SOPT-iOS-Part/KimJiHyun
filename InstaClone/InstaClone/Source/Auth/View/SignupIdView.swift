@@ -7,9 +7,7 @@
 
 import UIKit
 
-import SnapKit
-
-class SignupIdView: UIView {
+final class SignupIdView: BaseView {
     
     private var guideStackView: UIStackView = {
         var stackView = UIStackView()
@@ -44,23 +42,11 @@ class SignupIdView: UIView {
     
     var nextButton = BasicButton()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setUp()
-        configureUI()
-        constraints()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func setUp() {
+    override func setUp() {
         nextButton.isEnabled = false
     }
     
-    func configureUI() {
+    override func configureUI() {
         
         self.backgroundColor = .white
         
@@ -71,7 +57,7 @@ class SignupIdView: UIView {
         [idGuideLabel, idSubGuideLabel].forEach { guideStackView.addArrangedSubview($0) }
     }
     
-    func constraints() {
+    override func constraints() {
         
         guideStackView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()

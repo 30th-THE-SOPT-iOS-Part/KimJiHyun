@@ -5,6 +5,8 @@
 //  Created by 김지현 on 2022/04/14.
 //
 
+import UIKit
+
 class SignupDoneViewController: BaseViewController {
     
     let mainView = SignupDoneView()
@@ -21,7 +23,6 @@ class SignupDoneViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        binding()
     }
     
     override func binding() {

@@ -7,10 +7,7 @@
 
 import UIKit
 
-import Then
-import SnapKit
-
-class LoginView: UIView {
+final class LoginView: BaseView {
     
     private var instaLogoImageView = UIImageView().then {
         $0.image = UIImage(named: "instagramLogo")
@@ -59,19 +56,7 @@ class LoginView: UIView {
         $0.titleLabel?.font = .systemFont(ofSize: 12)
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setUp()
-        configureUI()
-        constraints()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func setUp() {
+    override func setUp() {
         
         userIdTextField.clearButtonMode = .whileEditing
         userPwdTextField.isSecureTextEntry = true
@@ -81,7 +66,7 @@ class LoginView: UIView {
         loginButton.isEnabled = false
     }
     
-    func configureUI() {
+    override func configureUI() {
         
         self.backgroundColor = .white
   
@@ -94,7 +79,7 @@ class LoginView: UIView {
         tfRightView.addSubview(eyeButton)
     }
     
-    func constraints() {
+    override func constraints() {
         
         instaLogoImageView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()

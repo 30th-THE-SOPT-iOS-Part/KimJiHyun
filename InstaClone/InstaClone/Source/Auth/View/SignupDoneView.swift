@@ -7,10 +7,7 @@
 
 import UIKit
 
-import SnapKit
-import Then
-
-class SignupDoneView: UIView {
+final class SignupDoneView: UIView {
     
     private var guideStackView: UIStackView = {
         var stackView = UIStackView()

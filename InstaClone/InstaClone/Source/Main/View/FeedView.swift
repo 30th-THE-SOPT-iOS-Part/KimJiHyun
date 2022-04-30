@@ -7,10 +7,7 @@
 
 import UIKit
 
-import SnapKit
-import Then
-
-class FeedView: UIView {
+class FeedView: BaseView {
     
     var feedTableView = UITableView().then {
         
@@ -29,28 +26,16 @@ class FeedView: UIView {
         $0.register(StoryCollectionViewCell.self, forCellWithReuseIdentifier: StoryCollectionViewCell.identifier)
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setUp()
-        configureUI()
-        constraints()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func setUp() {
+    override func setUp() {
         
     }
     
-    func configureUI() {
+    override func configureUI() {
         
         
     }
     
-    func constraints() {
+    override func constraints() {
         
     }
 }

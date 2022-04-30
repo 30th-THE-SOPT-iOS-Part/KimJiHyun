@@ -17,7 +17,6 @@ class LoginViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        binding()
     }
     
     override func binding() {

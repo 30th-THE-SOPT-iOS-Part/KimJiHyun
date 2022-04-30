@@ -17,9 +17,6 @@ class SignupPwdViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        configureUI()
-        binding()
     }
     
     override func configureUI() {

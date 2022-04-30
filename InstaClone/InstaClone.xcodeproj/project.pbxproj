@@ -12,6 +12,7 @@
 		B81D02F0280C15DD0093A1A4 /* SignupIdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81D02EF280C15DD0093A1A4 /* SignupIdViewModel.swift */; };
 		B83852DF281E4EDB0087166A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83852DE281E4EDB0087166A /* BaseViewController.swift */; };
 		B83852E3281E51140087166A /* CommonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83852E2281E51140087166A /* CommonViewModel.swift */; };
+		B83852E6281E56110087166A /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83852E5281E56110087166A /* BaseView.swift */; };
 		B85A6F1C2805B41800510B07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F1B2805B41800510B07 /* AppDelegate.swift */; };
 		B85A6F1E2805B41800510B07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F1D2805B41800510B07 /* SceneDelegate.swift */; };
 		B85A6F202805B41800510B07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F1F2805B41800510B07 /* ViewController.swift */; };
@@ -50,6 +51,7 @@
 		B81D02EF280C15DD0093A1A4 /* SignupIdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupIdViewModel.swift; sourceTree = "<group>"; };
 		B83852DE281E4EDB0087166A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B83852E2281E51140087166A /* CommonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModel.swift; sourceTree = "<group>"; };
+		B83852E5281E56110087166A /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		B85A6F182805B41800510B07 /* InstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85A6F1B2805B41800510B07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B85A6F1D2805B41800510B07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			children = (
 				B83852DE281E4EDB0087166A /* BaseViewController.swift */,
 				B83852E2281E51140087166A /* CommonViewModel.swift */,
+				B83852E5281E56110087166A /* BaseView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				B85A6F422805BE9A00510B07 /* LoginView.swift in Sources */,
 				B85A6F1E2805B41800510B07 /* SceneDelegate.swift in Sources */,
 				B85A6F452805C1F700510B07 /* BasicTextField.swift in Sources */,
+				B83852E6281E56110087166A /* BaseView.swift in Sources */,
 				B8A80F6B280FF10700AF8DEF /* ShopViewController.swift in Sources */,
 				B81D02EB280BC5EF0093A1A4 /* UINavigationController+Extension.swift in Sources */,
 			);
