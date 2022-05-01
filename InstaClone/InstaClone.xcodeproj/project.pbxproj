@@ -13,6 +13,9 @@
 		B83852DF281E4EDB0087166A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83852DE281E4EDB0087166A /* BaseViewController.swift */; };
 		B83852E3281E51140087166A /* CommonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83852E2281E51140087166A /* CommonViewModel.swift */; };
 		B83852E6281E56110087166A /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83852E5281E56110087166A /* BaseView.swift */; };
+		B83852E8281E61000087166A /* StoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83852E7281E61000087166A /* StoryModel.swift */; };
+		B83852EA281E61E60087166A /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83852E9281E61E60087166A /* FeedViewModel.swift */; };
+		B83852EC281E6CCA0087166A /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83852EB281E6CCA0087166A /* PostModel.swift */; };
 		B85A6F1C2805B41800510B07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F1B2805B41800510B07 /* AppDelegate.swift */; };
 		B85A6F1E2805B41800510B07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F1D2805B41800510B07 /* SceneDelegate.swift */; };
 		B85A6F202805B41800510B07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F1F2805B41800510B07 /* ViewController.swift */; };
@@ -52,6 +55,9 @@
 		B83852DE281E4EDB0087166A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B83852E2281E51140087166A /* CommonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModel.swift; sourceTree = "<group>"; };
 		B83852E5281E56110087166A /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		B83852E7281E61000087166A /* StoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryModel.swift; sourceTree = "<group>"; };
+		B83852E9281E61E60087166A /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		B83852EB281E6CCA0087166A /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		B85A6F182805B41800510B07 /* InstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85A6F1B2805B41800510B07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B85A6F1D2805B41800510B07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -258,6 +264,7 @@
 		B8A80F5E280FEE7200AF8DEF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B83852E9281E61E60087166A /* FeedViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -265,6 +272,8 @@
 		B8A80F5F280FEE8200AF8DEF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B83852E7281E61000087166A /* StoryModel.swift */,
+				B83852EB281E6CCA0087166A /* PostModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -378,15 +387,18 @@
 				B8D060132806D21E009135B8 /* SignupPwdView.swift in Sources */,
 				B8A80F65280FF0EB00AF8DEF /* FeedViewController.swift in Sources */,
 				B85A6F472805C2A000510B07 /* BasicButton.swift in Sources */,
+				B83852E8281E61000087166A /* StoryModel.swift in Sources */,
 				B85A6F492805C2CE00510B07 /* UIView+Extension.swift in Sources */,
 				B83852DF281E4EDB0087166A /* BaseViewController.swift in Sources */,
 				B8B308B828096AA4001C3056 /* LoginViewModel.swift in Sources */,
 				B83852E3281E51140087166A /* CommonViewModel.swift in Sources */,
 				B8D0600F2806D207009135B8 /* SignupPwdViewController.swift in Sources */,
+				B83852EC281E6CCA0087166A /* PostModel.swift in Sources */,
 				B8D0600D2806D1FA009135B8 /* SignupIdViewController.swift in Sources */,
 				B89F16C9281BCCFA00054695 /* StoryCollectionViewCell.swift in Sources */,
 				B8D060112806D214009135B8 /* SignupIdView.swift in Sources */,
 				B85A6F202805B41800510B07 /* ViewController.swift in Sources */,
+				B83852EA281E61E60087166A /* FeedViewModel.swift in Sources */,
 				B89F16C4281BCAA500054695 /* FeedView.swift in Sources */,
 				B81D02F0280C15DD0093A1A4 /* SignupIdViewModel.swift in Sources */,
 				B8A80F63280FF02F00AF8DEF /* TabBarController.swift in Sources */,
