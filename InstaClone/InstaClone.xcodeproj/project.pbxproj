@@ -16,6 +16,8 @@
 		B83852E8281E61000087166A /* StoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83852E7281E61000087166A /* StoryModel.swift */; };
 		B83852EA281E61E60087166A /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83852E9281E61E60087166A /* FeedViewModel.swift */; };
 		B83852EC281E6CCA0087166A /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83852EB281E6CCA0087166A /* PostModel.swift */; };
+		B83852EE281FA7220087166A /* StoryCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83852ED281FA7220087166A /* StoryCollectionTableViewCell.swift */; };
+		B83852F0281FCED80087166A /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83852EF281FCED80087166A /* PostTableViewCell.swift */; };
 		B85A6F1C2805B41800510B07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F1B2805B41800510B07 /* AppDelegate.swift */; };
 		B85A6F1E2805B41800510B07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F1D2805B41800510B07 /* SceneDelegate.swift */; };
 		B85A6F202805B41800510B07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F1F2805B41800510B07 /* ViewController.swift */; };
@@ -32,7 +34,6 @@
 		B85A6F4B2805CF6500510B07 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F4A2805CF6500510B07 /* LoginViewController.swift */; };
 		B89F16C4281BCAA500054695 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F16C3281BCAA500054695 /* FeedView.swift */; };
 		B89F16C9281BCCFA00054695 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F16C8281BCCFA00054695 /* StoryCollectionViewCell.swift */; };
-		B89F16CB281BD6F000054695 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F16CA281BD6F000054695 /* FeedTableViewCell.swift */; };
 		B8A80F63280FF02F00AF8DEF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A80F62280FF02F00AF8DEF /* TabBarController.swift */; };
 		B8A80F65280FF0EB00AF8DEF /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A80F64280FF0EB00AF8DEF /* FeedViewController.swift */; };
 		B8A80F67280FF0F500AF8DEF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A80F66280FF0F500AF8DEF /* SearchViewController.swift */; };
@@ -58,6 +59,8 @@
 		B83852E7281E61000087166A /* StoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryModel.swift; sourceTree = "<group>"; };
 		B83852E9281E61E60087166A /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		B83852EB281E6CCA0087166A /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		B83852ED281FA7220087166A /* StoryCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionTableViewCell.swift; sourceTree = "<group>"; };
+		B83852EF281FCED80087166A /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		B85A6F182805B41800510B07 /* InstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85A6F1B2805B41800510B07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B85A6F1D2805B41800510B07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,7 +76,6 @@
 		B85A6F4A2805CF6500510B07 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B89F16C3281BCAA500054695 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		B89F16C8281BCCFA00054695 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
-		B89F16CA281BD6F000054695 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		B8A80F62280FF02F00AF8DEF /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B8A80F64280FF0EB00AF8DEF /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		B8A80F66280FF0F500AF8DEF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -296,7 +298,8 @@
 			children = (
 				B89F16C3281BCAA500054695 /* FeedView.swift */,
 				B89F16C8281BCCFA00054695 /* StoryCollectionViewCell.swift */,
-				B89F16CA281BD6F000054695 /* FeedTableViewCell.swift */,
+				B83852ED281FA7220087166A /* StoryCollectionTableViewCell.swift */,
+				B83852EF281FCED80087166A /* PostTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -390,12 +393,14 @@
 				B83852E8281E61000087166A /* StoryModel.swift in Sources */,
 				B85A6F492805C2CE00510B07 /* UIView+Extension.swift in Sources */,
 				B83852DF281E4EDB0087166A /* BaseViewController.swift in Sources */,
+				B83852F0281FCED80087166A /* PostTableViewCell.swift in Sources */,
 				B8B308B828096AA4001C3056 /* LoginViewModel.swift in Sources */,
 				B83852E3281E51140087166A /* CommonViewModel.swift in Sources */,
 				B8D0600F2806D207009135B8 /* SignupPwdViewController.swift in Sources */,
 				B83852EC281E6CCA0087166A /* PostModel.swift in Sources */,
 				B8D0600D2806D1FA009135B8 /* SignupIdViewController.swift in Sources */,
 				B89F16C9281BCCFA00054695 /* StoryCollectionViewCell.swift in Sources */,
+				B83852EE281FA7220087166A /* StoryCollectionTableViewCell.swift in Sources */,
 				B8D060112806D214009135B8 /* SignupIdView.swift in Sources */,
 				B85A6F202805B41800510B07 /* ViewController.swift in Sources */,
 				B83852EA281E61E60087166A /* FeedViewModel.swift in Sources */,
@@ -404,7 +409,6 @@
 				B8A80F63280FF02F00AF8DEF /* TabBarController.swift in Sources */,
 				B8D060172807F577009135B8 /* SignupDoneView.swift in Sources */,
 				B85A6F1C2805B41800510B07 /* AppDelegate.swift in Sources */,
-				B89F16CB281BD6F000054695 /* FeedTableViewCell.swift in Sources */,
 				B8A80F69280FF0FC00AF8DEF /* ReelsViewController.swift in Sources */,
 				B8A80F6D280FF10C00AF8DEF /* MypageViewController.swift in Sources */,
 				B85A6F4B2805CF6500510B07 /* LoginViewController.swift in Sources */,

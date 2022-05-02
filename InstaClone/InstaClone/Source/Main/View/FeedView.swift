@@ -13,45 +13,27 @@ class FeedView: BaseView {
         
         $0.backgroundColor = .systemGray3
         $0.separatorColor = .clear
-        $0.rowHeight = 100
-        $0.register(FeedTableViewCell.self, forCellReuseIdentifier: FeedTableViewCell.identifier)
-    }
-    
-    var storyCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout()).then {
-        
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 100, height: 100)
-        layout.scrollDirection = .horizontal
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 4, bottom: 0, right: 4)
-        $0.collectionViewLayout = layout
-        $0.backgroundColor = .systemGray6
-        $0.register(StoryCollectionViewCell.self, forCellWithReuseIdentifier: StoryCollectionViewCell.identifier)
+        $0.showsVerticalScrollIndicator = false
+        $0.register(StoryCollectionTableViewCell.self, forCellReuseIdentifier: StoryCollectionTableViewCell.identifier)
+        $0.register(PostTableViewCell.self, forCellReuseIdentifier: PostTableViewCell.identifier)
     }
     
     override func setUp() {
         
+        feedTableView.bounces = false
     }
     
     override func configureUI() {
         
-        self.addSubview(storyCollectionView)
         self.addSubview(feedTableView)
-        
     }
     
     override func constraints() {
         
-        storyCollectionView.snp.makeConstraints { make in
-            
-            make.top.equalTo(safeAreaLayoutGuide)
-            make.leading.trailing.equalToSuperview()
-            make.height.equalTo(100)
-        }
-        
         feedTableView.snp.makeConstraints { make in
-            make.top.equalTo(storyCollectionView.snp.bottom)
+            
+            make.top.bottom.equalTo(safeAreaLayoutGuide)
             make.leading.trailing.equalToSuperview()
-            make.bottom.equalTo(safeAreaLayoutGuide)
         }
         
     }

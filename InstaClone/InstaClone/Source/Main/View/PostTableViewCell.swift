@@ -1,18 +1,21 @@
 //
-//  FeedTableViewCell.swift
+//  PostTableViewCell.swift
 //  InstaClone
 //
-//  Created by 김지현 on 2022/04/29.
+//  Created by 김지현 on 2022/05/02.
 //
 
 import UIKit
 
+import RxSwift
+
 import SnapKit
 import Then
 
-class FeedTableViewCell: UITableViewCell {
+class PostTableViewCell: UITableViewCell {
 
-    static let identifier = "FeedTableViewCell"
+    static let identifier = "PostTableViewCell"
+    private var disposeBag = DisposeBag()
     
     private let backView = UIView().then {
         $0.backgroundColor = .red
@@ -25,7 +28,7 @@ class FeedTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        
+        disposeBag = DisposeBag()
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

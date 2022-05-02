@@ -13,12 +13,10 @@ import RxCocoa
 class FeedViewModel: CommonViewModel {
     
     struct Input {
-        let storyModel: [StoryModel]
         let postModel: [PostModel]
     }
     
     struct Output {
-        let storySampleData: Observable<[StoryModel]>
         let postSampleData: Observable<[PostModel]>
     }
     
@@ -26,8 +24,7 @@ class FeedViewModel: CommonViewModel {
     
     func transform(input: Input) -> Output {
         
-        return Output(storySampleData: Observable.of(input.storyModel),
-                      postSampleData: Observable.of(input.postModel))
+        return Output(postSampleData: Observable.of(input.postModel))
     }
     
     

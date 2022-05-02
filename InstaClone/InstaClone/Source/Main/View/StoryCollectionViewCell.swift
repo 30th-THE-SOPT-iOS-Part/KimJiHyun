@@ -7,15 +7,26 @@
 
 import UIKit
 
+import RxSwift
+
 import SnapKit
 import Then
 
 class StoryCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "StoryCollectionViewCell"
+    private var disposeBag = DisposeBag()
+    
+    var models = [StoryModel]()
     
     private let backView = UIView().then {
         $0.backgroundColor = .yellow
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        disposeBag = DisposeBag()
     }
     
     override init(frame: CGRect) {

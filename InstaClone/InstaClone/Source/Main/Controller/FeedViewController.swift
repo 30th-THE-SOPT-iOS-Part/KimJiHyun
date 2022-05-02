@@ -6,6 +6,7 @@
 //
 
 import RxSwift
+import UIKit
 
 class FeedViewController: BaseViewController {
     
@@ -23,22 +24,19 @@ class FeedViewController: BaseViewController {
     
     override func binding() {
         
-        let input = FeedViewModel.Input(storyModel: StoryModel.sampleData, postModel: PostModel.sampleData)
-        let output = viewModel.transform(input: input)
-        
-        output.storySampleData.bind(to: mainView.storyCollectionView.rx.items(
-            cellIdentifier: StoryCollectionViewCell.identifier, cellType: StoryCollectionViewCell.self)) { (row, element, cell) in
+        Observable.of(PostModel.sampleData).bind(to: mainView.feedTableView.rx.items) { (tableView, row, element) -> UITableViewCell in
                 
-                
-                
-            }
-            .disposed(by: disposeBag)
-        
-        output.postSampleData.bind(to: mainView.feedTableView.rx.items(
-            cellIdentifier: FeedTableViewCell.identifier, cellType: FeedTableViewCell.self)) { (row, element, cell) in
-                
-                cell.label.text = element.name
-                print(element.name)
+                switch row {
+                case 0:
+                    guard let cell = tableView.dequeueReusableCell(withIdentifier: StoryCollectionTableViewCell.identifier, for: IndexPath.init(row: row, section: 0)) as? StoryCollectionTableViewCell else { return UITableViewCell() }
+                    tableView.rowHeight = 200
+                    return cell
+                default:
+                    guard let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier, for: IndexPath.init(row: row, section: 0)) as? PostTableViewCell else { return UITableViewCell() }
+                    tableView.rowHeight = 100
+                    cell.label.text = element.name
+                    return cell
+                }
             }
             .disposed(by: disposeBag)
     }
