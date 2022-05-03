@@ -15,12 +15,17 @@ import Then
 class StoryCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "StoryCollectionViewCell"
-    private var disposeBag = DisposeBag()
+    var disposeBag = DisposeBag()
     
-    var models = [StoryModel]()
+    let profileImageView = UIImageView().then {
+        $0.setBorderColorAndRadius(cornerRadius: $0.frame.width/2)
+    }
     
-    private let backView = UIView().then {
-        $0.backgroundColor = .yellow
+    let nameLabel = UILabel().then {
+        $0.textColor = .black
+        $0.font = .systemFont(ofSize: 12, weight: .regular)
+        $0.text = "name"
+        $0.textAlignment = .center
     }
     
     override func prepareForReuse() {
@@ -32,7 +37,6 @@ class StoryCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = .yellow
         setUp()
         constraints()
     }
@@ -42,15 +46,21 @@ class StoryCollectionViewCell: UICollectionViewCell {
     }
     
     func setUp() {
-        
-        contentView.addSubview(backView)
-        
+        contentView.addSubviews([profileImageView, nameLabel])
     }
     
     func constraints() {
         
-        backView.snp.makeConstraints { make in
-            make.edges.equalToSuperview().inset(4)
+        profileImageView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().offset(4)
+            make.size.equalTo(48)
+        }
+        
+        nameLabel.snp.makeConstraints { make in
+            make.top.equalTo(profileImageView.snp.bottom).offset(4)
+            make.leading.trailing.equalToSuperview()
+            make.bottom.equalToSuperview().inset(4)
         }
 
     }

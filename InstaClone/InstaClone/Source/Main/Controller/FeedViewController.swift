@@ -29,12 +29,11 @@ class FeedViewController: BaseViewController {
                 switch row {
                 case 0:
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: StoryCollectionTableViewCell.identifier, for: IndexPath.init(row: row, section: 0)) as? StoryCollectionTableViewCell else { return UITableViewCell() }
-                    tableView.rowHeight = 200
+                    
                     return cell
                 default:
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier, for: IndexPath.init(row: row, section: 0)) as? PostTableViewCell else { return UITableViewCell() }
-                    tableView.rowHeight = 100
-                    cell.label.text = element.name
+
                     return cell
                 }
             }
