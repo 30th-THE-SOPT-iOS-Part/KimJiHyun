@@ -32,9 +32,11 @@ class FeedView: BaseView {
     
     override func constraints() {
         
+        feedTableView.translatesAutoresizingMaskIntoConstraints = false
+        
         feedTableView.snp.makeConstraints { make in
-            make.top.bottom.equalTo(safeAreaLayoutGuide)
-            make.leading.trailing.equalToSuperview()
+            make.top.equalTo(safeAreaLayoutGuide)
+            make.leading.trailing.bottom.equalToSuperview()
         }
     }
 }

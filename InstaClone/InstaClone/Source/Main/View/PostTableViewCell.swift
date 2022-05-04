@@ -27,6 +27,9 @@ class PostTableViewCell: UITableViewCell {
     
     let topNameButton = UIButton().then {
         $0.setTitle("name", for: .normal)
+        $0.setTitleColor(.black, for: .normal)
+        $0.titleLabel?.font = .systemFont(ofSize: 12, weight: .medium)
+        $0.backgroundColor = .yellow
     }
     
     let threeDotButton = UIButton().then {
@@ -50,19 +53,22 @@ class PostTableViewCell: UITableViewCell {
     
     let likeNumLabel = UILabel().then {
         $0.textColor = .black
-        $0.font = .systemFont(ofSize: 11, weight: .regular)
+        $0.font = .systemFont(ofSize: 12, weight: .medium)
         $0.text = "좋아요 30개"
         $0.textAlignment = .left
     }
     
     let bottomNameButton = UIButton().then {
         $0.setTitle("name", for: .normal)
+        $0.setTitleColor(.black, for: .normal)
+        $0.titleLabel?.font = .systemFont(ofSize: 12, weight: .regular)
+        $0.backgroundColor = .yellow
     }
     
     let contentLabel = UILabel().then {
         $0.textColor = .black
         $0.font = .systemFont(ofSize: 11, weight: .regular)
-        $0.text = "name"
+        $0.text = "content"
         $0.textAlignment = .left
     }
     
@@ -113,9 +119,11 @@ class PostTableViewCell: UITableViewCell {
         
         topNameButton.snp.makeConstraints { make in
             make.centerY.equalTo(profileImageView.snp.centerY)
+            make.leading.equalTo(profileImageView.snp.trailing).offset(4)
         }
         
         threeDotButton.snp.makeConstraints { make in
+            make.centerY.equalTo(profileImageView.snp.centerY)
             make.right.equalToSuperview().inset(10)
             make.size.equalTo(24)
         }
@@ -161,18 +169,18 @@ class PostTableViewCell: UITableViewCell {
         }
         
         likeNumLabel.snp.makeConstraints { make in
-            make.top.leading.equalToSuperview().inset(10)
+            make.top.leading.equalToSuperview().inset(8)
         }
         
         bottomNameButton.snp.makeConstraints { make in
             make.top.equalTo(likeNumLabel.snp.bottom).offset(10)
-            make.leading.equalToSuperview().inset(10)
+            make.leading.equalTo(likeNumLabel.snp.leading)
         }
         
         contentLabel.snp.makeConstraints { make in
-            make.top.equalTo(likeNumLabel.snp.bottom).offset(10)
+            make.top.equalTo(bottomNameButton.snp.top)
             make.leading.equalTo(bottomNameButton.snp.trailing).offset(4)
-            make.trailing.equalToSuperview().inset(10)
+            //make.trailing.equalToSuperview().inset(10)
         }
         
         commentNumButton.snp.makeConstraints { make in
