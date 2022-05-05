@@ -25,11 +25,10 @@ class PostTableViewCell: UITableViewCell {
         $0.setBorderColorAndRadius(cornerRadius: $0.frame.width/2)
     }
     
-    let topNameButton = UIButton().then {
+    let nameButton = UIButton().then {
         $0.setTitle("name", for: .normal)
         $0.setTitleColor(.black, for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 12, weight: .medium)
-        $0.backgroundColor = .yellow
     }
     
     let threeDotButton = UIButton().then {
@@ -58,18 +57,12 @@ class PostTableViewCell: UITableViewCell {
         $0.textAlignment = .left
     }
     
-    let bottomNameButton = UIButton().then {
-        $0.setTitle("name", for: .normal)
-        $0.setTitleColor(.black, for: .normal)
-        $0.titleLabel?.font = .systemFont(ofSize: 12, weight: .regular)
-        $0.backgroundColor = .yellow
-    }
-    
     let contentLabel = UILabel().then {
         $0.textColor = .black
-        $0.font = .systemFont(ofSize: 11, weight: .regular)
+        $0.font = .systemFont(ofSize: 12, weight: .regular)
         $0.text = "content"
         $0.textAlignment = .left
+        $0.numberOfLines = 0
     }
     
     let commentNumButton = UIButton().then {
@@ -97,9 +90,9 @@ class PostTableViewCell: UITableViewCell {
     
     func setUp() {
         
-        topView.addSubviews([profileImageView, topNameButton, threeDotButton])
+        topView.addSubviews([profileImageView, nameButton, threeDotButton])
         buttonView.addSubviews([likeButton, commentButton, shareButton, bookmarkButton])
-        bottomView.addSubviews([likeNumLabel, bottomNameButton, contentLabel, commentNumButton])
+        bottomView.addSubviews([likeNumLabel, contentLabel, commentNumButton])
         
         contentView.addSubviews([topView, postIamgeView, buttonView, bottomView])
     }
@@ -117,7 +110,7 @@ class PostTableViewCell: UITableViewCell {
             make.size.equalTo(24)
         }
         
-        topNameButton.snp.makeConstraints { make in
+        nameButton.snp.makeConstraints { make in
             make.centerY.equalTo(profileImageView.snp.centerY)
             make.leading.equalTo(profileImageView.snp.trailing).offset(4)
         }
@@ -172,15 +165,10 @@ class PostTableViewCell: UITableViewCell {
             make.top.leading.equalToSuperview().inset(8)
         }
         
-        bottomNameButton.snp.makeConstraints { make in
+        contentLabel.snp.makeConstraints { make in
             make.top.equalTo(likeNumLabel.snp.bottom).offset(10)
             make.leading.equalTo(likeNumLabel.snp.leading)
-        }
-        
-        contentLabel.snp.makeConstraints { make in
-            make.top.equalTo(bottomNameButton.snp.top)
-            make.leading.equalTo(bottomNameButton.snp.trailing).offset(4)
-            //make.trailing.equalToSuperview().inset(10)
+            make.trailing.equalToSuperview().inset(10)
         }
         
         commentNumButton.snp.makeConstraints { make in

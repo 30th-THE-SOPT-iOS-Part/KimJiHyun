@@ -18,6 +18,7 @@
 		B83852EC281E6CCA0087166A /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83852EB281E6CCA0087166A /* PostModel.swift */; };
 		B83852EE281FA7220087166A /* StoryCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83852ED281FA7220087166A /* StoryCollectionTableViewCell.swift */; };
 		B83852F0281FCED80087166A /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83852EF281FCED80087166A /* PostTableViewCell.swift */; };
+		B83A131C282378F200199BAB /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A131B282378F200199BAB /* UIStackView+Extension.swift */; };
 		B85A6F1C2805B41800510B07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F1B2805B41800510B07 /* AppDelegate.swift */; };
 		B85A6F1E2805B41800510B07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F1D2805B41800510B07 /* SceneDelegate.swift */; };
 		B85A6F202805B41800510B07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F1F2805B41800510B07 /* ViewController.swift */; };
@@ -61,6 +62,7 @@
 		B83852EB281E6CCA0087166A /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		B83852ED281FA7220087166A /* StoryCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionTableViewCell.swift; sourceTree = "<group>"; };
 		B83852EF281FCED80087166A /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		B83A131B282378F200199BAB /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		B85A6F182805B41800510B07 /* InstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85A6F1B2805B41800510B07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B85A6F1D2805B41800510B07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				B85A6F482805C2CE00510B07 /* UIView+Extension.swift */,
 				B8D0600A2805D93C009135B8 /* UITextField+Extension.swift */,
 				B81D02EA280BC5EF0093A1A4 /* UINavigationController+Extension.swift */,
+				B83A131B282378F200199BAB /* UIStackView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				B85A6F492805C2CE00510B07 /* UIView+Extension.swift in Sources */,
 				B83852DF281E4EDB0087166A /* BaseViewController.swift in Sources */,
 				B83852F0281FCED80087166A /* PostTableViewCell.swift in Sources */,
+				B83A131C282378F200199BAB /* UIStackView+Extension.swift in Sources */,
 				B8B308B828096AA4001C3056 /* LoginViewModel.swift in Sources */,
 				B83852E3281E51140087166A /* CommonViewModel.swift in Sources */,
 				B8D0600F2806D207009135B8 /* SignupPwdViewController.swift in Sources */,
