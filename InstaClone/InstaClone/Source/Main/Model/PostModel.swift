@@ -22,6 +22,8 @@ extension PostModel {
     
     static let sampleData: [PostModel] = [
         
+        // cell row 첫번째에 collectionView를 넣는 바람에
+        // 두번째 cell row 부터 시작하는 피드가 되어, 두번째 data가 첫번째 피드에 들어가게 되는 issue
         PostModel(profileImageName: "더미", name: "", postImageName: "", likeNum: 0, content: "", commentNum: 0),
         PostModel(profileImageName: "avatar1", name: "avatar1", postImageName: "postImage1", likeNum: 1, content: "첫번째 게시물", commentNum: 1),
         PostModel(profileImageName: "avatar2", name: "avatar2", postImageName: "postImage2", likeNum: 1, content: "두번째 게시물", commentNum: 1),

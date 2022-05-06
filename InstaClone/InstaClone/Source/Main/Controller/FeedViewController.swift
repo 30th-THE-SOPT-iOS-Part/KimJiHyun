@@ -57,11 +57,14 @@ class FeedViewController: BaseViewController {
                     
                 default:
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier, for: IndexPath.init(row: row, section: 0)) as? PostTableViewCell else { return UITableViewCell() }
-                    
-                    cell.nameButton.setTitle(element.name, for: .normal)
+
+                    cell.postUserName = element.name
+                    cell.fullContent = "\(element.name) \(element.content)"
+
                     cell.profileImageView.image = UIImage(named: element.profileImageName)
                     cell.postIamgeView.image = UIImage(named: element.postImageName)
-
+                    
+                    cell.commentNumButton.setTitle("댓글 \(element.commentNum)개 모두 보기", for: .normal)
                     return cell
                 }
             }

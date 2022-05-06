@@ -17,6 +17,21 @@ class PostTableViewCell: UITableViewCell {
     static let identifier = "PostTableViewCell"
     private var disposeBag = DisposeBag()
     
+    var postUserName: String = "" {
+        willSet {
+            nameButton.setTitle(newValue, for: .normal)
+            print(newValue)
+        }
+    }
+    
+    var fullContent: String = "" {
+        willSet {
+            contentLabel.attributedText = NSMutableAttributedString()
+                .changeWeight(to: .medium, content: newValue, targetString: postUserName, size: 12)
+            print(postUserName ,newValue)
+        }
+    }
+    
     let topView = UIView()
     let buttonView = UIView()
     let bottomView = UIView()
@@ -24,7 +39,7 @@ class PostTableViewCell: UITableViewCell {
     let profileImageView = UIImageView().then {
         $0.setBorderColorAndRadius(cornerRadius: $0.frame.width/2)
     }
-    
+
     let nameButton = UIButton().then {
         $0.setTitle("name", for: .normal)
         $0.setTitleColor(.black, for: .normal)
@@ -59,15 +74,15 @@ class PostTableViewCell: UITableViewCell {
     
     let contentLabel = UILabel().then {
         $0.textColor = .black
-        $0.font = .systemFont(ofSize: 12, weight: .regular)
         $0.text = "content"
         $0.textAlignment = .left
         $0.numberOfLines = 0
     }
     
     let commentNumButton = UIButton().then {
-        $0.titleLabel?.textColor = .systemGray3
-        $0.titleLabel?.font = .systemFont(ofSize: 11, weight: .regular)
+        $0.titleLabel?.font = .systemFont(ofSize: 12, weight: .regular)
+        $0.setTitleColor(.systemGray, for: .normal)
+        //$0.setTitle("댓ㄱ르댓글", for: .normal)
         $0.titleLabel?.textAlignment = .left
     }
     
@@ -134,7 +149,7 @@ class PostTableViewCell: UITableViewCell {
         
         likeButton.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
-            make.leading.equalToSuperview().offset(10)
+            make.leading.equalToSuperview().offset(12)
             make.size.equalTo(24)
         }
         
@@ -162,18 +177,19 @@ class PostTableViewCell: UITableViewCell {
         }
         
         likeNumLabel.snp.makeConstraints { make in
-            make.top.leading.equalToSuperview().inset(8)
+            make.top.equalToSuperview().inset(4)
+            make.leading.equalToSuperview().inset(16)
         }
         
         contentLabel.snp.makeConstraints { make in
-            make.top.equalTo(likeNumLabel.snp.bottom).offset(10)
+            make.top.equalTo(likeNumLabel.snp.bottom).offset(6)
             make.leading.equalTo(likeNumLabel.snp.leading)
             make.trailing.equalToSuperview().inset(10)
         }
         
         commentNumButton.snp.makeConstraints { make in
-            make.top.equalTo(contentLabel.snp.bottom).offset(10)
-            make.leading.equalToSuperview().offset(10)
+            make.top.equalTo(contentLabel.snp.bottom).offset(6)
+            make.leading.equalTo(likeNumLabel.snp.leading)
             make.bottom.equalToSuperview().inset(10)
         }
     }
