@@ -97,6 +97,6 @@ iOSInjectionProject/
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
 
-4thSeminar/Network/APIConstants.swift
+**/APIConstants.swift
 
 # End of https://www.toptal.com/developers/gitignore/api/xcode,swift
