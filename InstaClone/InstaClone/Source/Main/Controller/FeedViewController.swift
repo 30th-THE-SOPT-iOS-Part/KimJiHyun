@@ -47,7 +47,7 @@ class FeedViewController: BaseViewController {
     
     override func binding() {
         
-        Observable.of(PostModel.sampleData).bind(to: mainView.feedTableView.rx.items) { (tableView, row, element) -> UITableViewCell in
+        Observable.of(PostModel.sampleData).bind(to: mainView.feedTableView.rx.items) { [unowned self] (tableView, row, element) -> UITableViewCell in
                 
                 switch row {
                 case 0:
@@ -58,13 +58,8 @@ class FeedViewController: BaseViewController {
                 default:
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier, for: IndexPath.init(row: row, section: 0)) as? PostTableViewCell else { return UITableViewCell() }
 
-                    cell.postUserName = element.name
-                    cell.fullContent = "\(element.name) \(element.content)"
-
-                    cell.profileImageView.image = UIImage(named: element.profileImageName)
-                    cell.postIamgeView.image = UIImage(named: element.postImageName)
                     
-                    cell.commentNumButton.setTitle("댓글 \(element.commentNum)개 모두 보기", for: .normal)
+                    cell.setData(element)
                     return cell
                 }
             }
@@ -73,7 +68,6 @@ class FeedViewController: BaseViewController {
         mainView.feedTableView.rx.setDelegate(self)
             .disposed(by: disposeBag)
     }
-    
 }
 
 extension FeedViewController: UITableViewDelegate {

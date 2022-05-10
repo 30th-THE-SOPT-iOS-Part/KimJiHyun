@@ -15,12 +15,15 @@ import Then
 class PostTableViewCell: UITableViewCell {
 
     static let identifier = "PostTableViewCell"
-    private var disposeBag = DisposeBag()
+    var disposeBag = DisposeBag()
+    
+    
+    // MARK: - 오브젝트 생성
+    var contentLabelAction : ((UIGestureRecognizer) -> ())?
     
     var postUserName: String = "" {
         willSet {
             nameButton.setTitle(newValue, for: .normal)
-            print(newValue)
         }
     }
     
@@ -28,7 +31,6 @@ class PostTableViewCell: UITableViewCell {
         willSet {
             contentLabel.attributedText = NSMutableAttributedString()
                 .changeWeight(to: .medium, content: newValue, targetString: postUserName, size: 12)
-            print(postUserName ,newValue)
         }
     }
     
@@ -75,8 +77,8 @@ class PostTableViewCell: UITableViewCell {
     let contentLabel = UILabel().then {
         $0.textColor = .black
         $0.text = "content"
-        $0.textAlignment = .left
         $0.numberOfLines = 0
+        $0.isUserInteractionEnabled = true
     }
     
     let commentNumButton = UIButton().then {
@@ -86,6 +88,7 @@ class PostTableViewCell: UITableViewCell {
         $0.titleLabel?.textAlignment = .left
     }
     
+    // MARK: - override 함수들
     override func prepareForReuse() {
         super.prepareForReuse()
         
@@ -102,8 +105,54 @@ class PostTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+
+// MARK: - contentClicked Selector
+extension PostTableViewCell {
+    
+    @objc func contentClicked(_ sender: UITapGestureRecognizer) {
+        print(#function)
+        contentLabelAction?(sender)
+    }
+}
+
+// MARK: - UI 및 기타 설정
+extension PostTableViewCell {
+    
+    func setData(_ postData: PostModel) {
+        
+        postUserName = postData.name
+        fullContent = "\(postData.name) \(postData.content)"
+
+        profileImageView.image = UIImage(named: postData.profileImageName)
+        postIamgeView.image = UIImage(named: postData.postImageName)
+        
+        commentNumButton.setTitle("댓글 \(postData.commentNum)개 모두 보기", for: .normal)
+        
+        likeButton.rx.tap
+            .subscribe { _ in
+                print("좋아요 클릭")
+            }
+            .disposed(by: disposeBag)
+
+        contentLabelAction = { [unowned self] sender in
+            let point = sender.location(in: contentLabel)
+
+            if let postUserNameRect = contentLabel.calRectForSpecificRange(subString: postData.name),
+               postUserNameRect.contains(point) {
+
+                print("유저 네임 누름")
+            } else {
+                print("그 외 영역 누름")
+            }
+        }
+    }
     
     func setUp() {
+        
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(contentClicked(_:)))
+        recognizer.delegate = self
+        contentLabel.addGestureRecognizer(recognizer)
         
         topView.addSubviews([profileImageView, nameButton, threeDotButton])
         buttonView.addSubviews([likeButton, commentButton, shareButton, bookmarkButton])
@@ -193,5 +242,4 @@ class PostTableViewCell: UITableViewCell {
             make.bottom.equalToSuperview().inset(10)
         }
     }
-
 }
