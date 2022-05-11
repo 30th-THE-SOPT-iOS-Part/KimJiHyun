@@ -137,7 +137,7 @@ extension PostTableViewCell {
 
         contentLabelAction = { [unowned self] sender in
             let point = sender.location(in: contentLabel)
-
+ 
             if let postUserNameRect = contentLabel.calRectForSpecificRange(subString: postData.name),
                postUserNameRect.contains(point) {
 

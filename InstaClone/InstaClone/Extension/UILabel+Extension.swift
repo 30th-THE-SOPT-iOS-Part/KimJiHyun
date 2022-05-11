@@ -10,33 +10,28 @@ import UIKit
 extension UILabel {
     
     func calRectForSpecificRange(subString: String) -> CGRect? {
-        
-        //guard let attributedText = attributedText else { return }
-        guard let text = self.text,
-              let subRange = text.range(of: subString) else { return nil }
-        let range = NSRange(subRange, in: text)
-        
-        // NSTextStorage >> NSLayoutManager >> NSTextContainer
-        
-        // 1. UILabel의 attributedText를 가지고 있는 NSTextStorage를 생성한다
-        // 2. 생성한 NSTextStorage에 LayoutManager를 추가해준다
-        // 3. UILabel의 intrinsicContentSize 만큼의 NSTextContainer를 생성해준다
-        // 4. LayoutManager에 생성한 NSTextContainer를 추가해준다.
-        // 5. 실질적인 범위를 구하기 위해 characterRange를 통해 포인터 지정 !
-        // 6. LayoutManager에 저장되어있는 textContainer 중 실 포인터 CGRect를 리턴해준다
-        
-        guard let attributedText = self.attributedText else { return nil }
-        let layoutManager = NSLayoutManager()
-        let textStorage = NSTextStorage(attributedString: attributedText)
-        textStorage.addLayoutManager(layoutManager)
-        
-        let textContainer = NSTextContainer(size: intrinsicContentSize)
-        textContainer.lineFragmentPadding = 0.0
-        layoutManager.addTextContainer(textContainer)
-        
-        var glyphRange = NSRange()
-        layoutManager.characterRange(forGlyphRange: range, actualGlyphRange: &glyphRange)
-        
-        return layoutManager.boundingRect(forGlyphRange: glyphRange, in: textContainer)
-    }
+            
+            // NSTextStorage >> NSLayoutManager >> NSTextContainer >> View
+            
+            // NSTextStorage는 텍스트와 속성 정보를 저장하므로 label.textd의 attributedText로 생성
+            guard let attributedText = self.attributedText else { return nil }
+            let textStorage = NSTextStorage(attributedString: attributedText)
+            
+            // textStorage에게 layoutManager를 붙여줍니다
+            let layoutManager = NSLayoutManager()
+            textStorage.addLayoutManager(layoutManager)
+            
+            // NSTextContainer은 size로 생성할 수 있다. size는 Label의 IntrinsicContentSize로
+            let textContainer = NSTextContainer(size: bounds.size)
+            textContainer.lineFragmentPadding = 0.0 // default 5.0
+            
+            // layoutManager을 기반으로 생성되어야 하는 컨테이너를 추가해준다
+            layoutManager.addTextContainer(textContainer)
+            
+            // container 내에서 특정 character범위의 영역을 구한다.
+            guard let text = self.text,
+                  let subRange = text.range(of: subString) else { return nil }
+            let range = NSRange(subRange, in: text)
+            return layoutManager.boundingRect(forGlyphRange: range, in: textContainer)
+        }
 }
