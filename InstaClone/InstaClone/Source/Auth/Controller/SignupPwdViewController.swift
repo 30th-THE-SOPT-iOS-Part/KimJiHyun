@@ -21,7 +21,7 @@ class SignupPwdViewController: BaseViewController {
     
     override func configureUI() {
         
-        navigationController?.initializeNavigationBarWithBackButton(navigationItem: self.navigationItem)
+        navigationController?.initNavigationBarWithBackButton(navigationItem: self.navigationItem)
     }
     
     override func binding() {

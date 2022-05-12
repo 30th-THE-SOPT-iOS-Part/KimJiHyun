@@ -9,29 +9,40 @@ import UIKit
 
 extension UINavigationController {
     
-    func initializeNavigationBarWithBackButton(navigationItem: UINavigationItem) {
-
-        navigationBar.barTintColor = .white
-        navigationBar.isTranslucent = false
+    private var titleAttributes: [NSAttributedString.Key : Any] {
         
         let attributes = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)]
-        navigationBar.titleTextAttributes = attributes as [NSAttributedString.Key : Any]
+        
+        return attributes
+    }
+    
+    func initNavigationBarWithBackButton(navigationItem: UINavigationItem) {
+
+        navigationBar.barTintColor = .white
+        navigationBar.titleTextAttributes = titleAttributes
         
         let backButton = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(tapBackButton))
         backButton.tintColor = .black
-        
         navigationItem.leftBarButtonItem = backButton
+    }
+    
+    func initNavigationBarWithoutBackButton(navigationItem: UINavigationItem) {
+
+        navigationBar.barTintColor = .white
+        navigationBar.titleTextAttributes = titleAttributes
     }
     
     @objc func tapBackButton() {
         self.popViewController(animated: true)
     }
-    
-    func initializeNavigationBarWithoutBackButton(navigationItem: UINavigationItem) {
+}
 
-        navigationBar.barTintColor = .white
+extension UINavigationController {
+    
+    func addBarButtonItems(navigationItem: UINavigationItem, buttonArray: [UIButton], isRight: Bool = true) {
         
-        let attributes = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)]
-        navigationBar.titleTextAttributes = attributes as [NSAttributedString.Key : Any]
+        let stackview = UIStackView(arrangedSubviews: buttonArray)
+        let barButton = UIBarButtonItem(customView: stackview.horizontalSpacing)
+        isRight ? (navigationItem.rightBarButtonItem = barButton) : (navigationItem.leftBarButtonItem = barButton)
     }
 }

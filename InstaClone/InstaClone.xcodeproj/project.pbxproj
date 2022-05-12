@@ -18,6 +18,9 @@
 		B83852EC281E6CCA0087166A /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83852EB281E6CCA0087166A /* PostModel.swift */; };
 		B83852EE281FA7220087166A /* StoryCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83852ED281FA7220087166A /* StoryCollectionTableViewCell.swift */; };
 		B83852F0281FCED80087166A /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83852EF281FCED80087166A /* PostTableViewCell.swift */; };
+		B83A131C282378F200199BAB /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A131B282378F200199BAB /* UIStackView+Extension.swift */; };
+		B83A131E2823DBB900199BAB /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A131D2823DBB900199BAB /* UILabel+Extension.swift */; };
+		B83A13202823DC6900199BAB /* NSMutableAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A131F2823DC6900199BAB /* NSMutableAttributedString+Extension.swift */; };
 		B85A6F1C2805B41800510B07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F1B2805B41800510B07 /* AppDelegate.swift */; };
 		B85A6F1E2805B41800510B07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F1D2805B41800510B07 /* SceneDelegate.swift */; };
 		B85A6F202805B41800510B07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F1F2805B41800510B07 /* ViewController.swift */; };
@@ -32,6 +35,7 @@
 		B85A6F472805C2A000510B07 /* BasicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F462805C2A000510B07 /* BasicButton.swift */; };
 		B85A6F492805C2CE00510B07 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F482805C2CE00510B07 /* UIView+Extension.swift */; };
 		B85A6F4B2805CF6500510B07 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F4A2805CF6500510B07 /* LoginViewController.swift */; };
+		B894E0E9282A52330017FF31 /* PostTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B894E0E8282A52330017FF31 /* PostTableViewDelegate.swift */; };
 		B89F16C4281BCAA500054695 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F16C3281BCAA500054695 /* FeedView.swift */; };
 		B89F16C9281BCCFA00054695 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F16C8281BCCFA00054695 /* StoryCollectionViewCell.swift */; };
 		B8A80F63280FF02F00AF8DEF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A80F62280FF02F00AF8DEF /* TabBarController.swift */; };
@@ -61,6 +65,9 @@
 		B83852EB281E6CCA0087166A /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		B83852ED281FA7220087166A /* StoryCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionTableViewCell.swift; sourceTree = "<group>"; };
 		B83852EF281FCED80087166A /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		B83A131B282378F200199BAB /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		B83A131D2823DBB900199BAB /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		B83A131F2823DC6900199BAB /* NSMutableAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extension.swift"; sourceTree = "<group>"; };
 		B85A6F182805B41800510B07 /* InstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85A6F1B2805B41800510B07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B85A6F1D2805B41800510B07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +81,7 @@
 		B85A6F462805C2A000510B07 /* BasicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButton.swift; sourceTree = "<group>"; };
 		B85A6F482805C2CE00510B07 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		B85A6F4A2805CF6500510B07 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B894E0E8282A52330017FF31 /* PostTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewDelegate.swift; sourceTree = "<group>"; };
 		B89F16C3281BCAA500054695 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		B89F16C8281BCCFA00054695 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		B8A80F62280FF02F00AF8DEF /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -113,6 +121,7 @@
 				B83852DE281E4EDB0087166A /* BaseViewController.swift */,
 				B83852E2281E51140087166A /* CommonViewModel.swift */,
 				B83852E5281E56110087166A /* BaseView.swift */,
+				B894E0E8282A52330017FF31 /* PostTableViewDelegate.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -190,6 +199,9 @@
 				B85A6F482805C2CE00510B07 /* UIView+Extension.swift */,
 				B8D0600A2805D93C009135B8 /* UITextField+Extension.swift */,
 				B81D02EA280BC5EF0093A1A4 /* UINavigationController+Extension.swift */,
+				B83A131B282378F200199BAB /* UIStackView+Extension.swift */,
+				B83A131D2823DBB900199BAB /* UILabel+Extension.swift */,
+				B83A131F2823DC6900199BAB /* NSMutableAttributedString+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -394,6 +406,8 @@
 				B85A6F492805C2CE00510B07 /* UIView+Extension.swift in Sources */,
 				B83852DF281E4EDB0087166A /* BaseViewController.swift in Sources */,
 				B83852F0281FCED80087166A /* PostTableViewCell.swift in Sources */,
+				B83A131E2823DBB900199BAB /* UILabel+Extension.swift in Sources */,
+				B83A131C282378F200199BAB /* UIStackView+Extension.swift in Sources */,
 				B8B308B828096AA4001C3056 /* LoginViewModel.swift in Sources */,
 				B83852E3281E51140087166A /* CommonViewModel.swift in Sources */,
 				B8D0600F2806D207009135B8 /* SignupPwdViewController.swift in Sources */,
@@ -410,6 +424,7 @@
 				B8D060172807F577009135B8 /* SignupDoneView.swift in Sources */,
 				B85A6F1C2805B41800510B07 /* AppDelegate.swift in Sources */,
 				B8A80F69280FF0FC00AF8DEF /* ReelsViewController.swift in Sources */,
+				B83A13202823DC6900199BAB /* NSMutableAttributedString+Extension.swift in Sources */,
 				B8A80F6D280FF10C00AF8DEF /* MypageViewController.swift in Sources */,
 				B85A6F4B2805CF6500510B07 /* LoginViewController.swift in Sources */,
 				B8A80F67280FF0F500AF8DEF /* SearchViewController.swift in Sources */,
@@ -419,6 +434,7 @@
 				B85A6F452805C1F700510B07 /* BasicTextField.swift in Sources */,
 				B83852E6281E56110087166A /* BaseView.swift in Sources */,
 				B8A80F6B280FF10700AF8DEF /* ShopViewController.swift in Sources */,
+				B894E0E9282A52330017FF31 /* PostTableViewDelegate.swift in Sources */,
 				B81D02EB280BC5EF0093A1A4 /* UINavigationController+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
