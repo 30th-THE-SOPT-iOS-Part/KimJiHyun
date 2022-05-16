@@ -57,27 +57,37 @@ class LoginViewController: BaseViewController {
         
         output.tapLoginButton
             .subscribe { [weak self] _ in
-                self?.httpViewModel.login(email: (self?.mainView.userIdTextField.text)!,
-                                          password: (self?.mainView.userPwdTextField.text)!) { response in
-                    
-                    if let response = response as? LoginData {
-                        let tabBarController = TabBarController()
-                        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let window = windowScene.windows.first else {return}
-                        
-                        window.rootViewController = tabBarController
-                        
-                        UIView.transition(with: window, duration: 2, options: .transitionCrossDissolve, animations: {}, completion: nil)
-                        windowScene.windows.first?.makeKeyAndVisible()
-                        
-                        print(response)
-                    }
-                    
-                    if let message = response as? String {
-                        print(message)
-                    }
-                }
+                
+                self?.alert(title: "로그인 성공", okTitle: "확인", okHandler: { action in
+                    self?.login()
+                })
             }
             .disposed(by: disposeBag)
 
+    }
+}
+
+extension LoginViewController {
+    
+    func login() {
+        self.httpViewModel.login(email: (self.mainView.userIdTextField.text)!,
+                                  password: (self.mainView.userPwdTextField.text)!) { response in
+            
+            if let response = response as? LoginData {
+                let tabBarController = TabBarController()
+                guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let window = windowScene.windows.first else {return}
+                
+                window.rootViewController = tabBarController
+                
+                UIView.transition(with: window, duration: 2, options: .transitionCrossDissolve, animations: {}, completion: nil)
+                windowScene.windows.first?.makeKeyAndVisible()
+                
+                print(response)
+            }
+            
+            if let message = response as? String {
+                print(message)
+            }
+        }
     }
 }

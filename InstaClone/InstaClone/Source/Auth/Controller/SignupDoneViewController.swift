@@ -29,13 +29,13 @@ class SignupDoneViewController: BaseViewController {
         
         mainView.doneButton.rx.tap
             .subscribe { _ in
-                let tabBarController = TabBarController()
-                guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let window = windowScene.windows.first else {return}
-                
-                window.rootViewController = tabBarController
-                
-                UIView.transition(with: window, duration: 2, options: .transitionCrossDissolve, animations: {}, completion: nil)
-                windowScene.windows.first?.makeKeyAndVisible()
+                self.alert(title: "회원가입 성공", okTitle: "확인", okHandler:  { action in
+                    
+                    guard let vc = self.presentingViewController as? UINavigationController else { return }
+                    self.dismiss(animated: true, completion: {
+                        vc.popToRootViewController(animated: true)
+                    })
+                })
             }
             .disposed(by: disposeBag)
         

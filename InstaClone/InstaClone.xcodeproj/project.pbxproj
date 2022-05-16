@@ -21,6 +21,7 @@
 		B83A131C282378F200199BAB /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A131B282378F200199BAB /* UIStackView+Extension.swift */; };
 		B83A131E2823DBB900199BAB /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A131D2823DBB900199BAB /* UILabel+Extension.swift */; };
 		B83A13202823DC6900199BAB /* NSMutableAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A131F2823DC6900199BAB /* NSMutableAttributedString+Extension.swift */; };
+		B83A2CC828321B3B00E79B2D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A2CC728321B3B00E79B2D /* UIViewController+Extension.swift */; };
 		B85A6F1C2805B41800510B07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F1B2805B41800510B07 /* AppDelegate.swift */; };
 		B85A6F1E2805B41800510B07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F1D2805B41800510B07 /* SceneDelegate.swift */; };
 		B85A6F202805B41800510B07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A6F1F2805B41800510B07 /* ViewController.swift */; };
@@ -78,6 +79,7 @@
 		B83A131B282378F200199BAB /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		B83A131D2823DBB900199BAB /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		B83A131F2823DC6900199BAB /* NSMutableAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		B83A2CC728321B3B00E79B2D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		B85A6F182805B41800510B07 /* InstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85A6F1B2805B41800510B07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B85A6F1D2805B41800510B07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				B83A131B282378F200199BAB /* UIStackView+Extension.swift */,
 				B83A131D2823DBB900199BAB /* UILabel+Extension.swift */,
 				B83A131F2823DC6900199BAB /* NSMutableAttributedString+Extension.swift */,
+				B83A2CC728321B3B00E79B2D /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B83A2CC828321B3B00E79B2D /* UIViewController+Extension.swift in Sources */,
 				B8D0600B2805D93C009135B8 /* UITextField+Extension.swift in Sources */,
 				B8D060132806D21E009135B8 /* SignupPwdView.swift in Sources */,
 				B8CAAF9F282E431000E20A55 /* APIConstants.swift in Sources */,
