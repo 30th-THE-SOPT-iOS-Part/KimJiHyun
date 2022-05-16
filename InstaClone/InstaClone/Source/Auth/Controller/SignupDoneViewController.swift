@@ -38,16 +38,6 @@ class SignupDoneViewController: BaseViewController {
                 })
             }
             .disposed(by: disposeBag)
-        
-        mainView.loginOtherAccountButton.rx.tap
-            .subscribe { [weak self] _ in
-                guard let vc = self?.presentingViewController as? UINavigationController else { return }
-                self?.dismiss(animated: true, completion: {
-                    vc.popToRootViewController(animated: true)
-                })
-            }
-            .disposed(by: disposeBag)
-
     }
 }
 
