@@ -52,7 +52,9 @@ class PostTableViewCell: UITableViewCell {
         $0.setImage(UIImage(named: "icn_more"), for: .normal)
     }
     
-    let postIamgeView = UIImageView()
+    let postImageView = UIImageView().then {
+        $0.contentMode = .scaleAspectFit
+    }
     
     let likeButton = UIButton().then {
         $0.setImage(UIImage(named: "icn_unlike"), for: .normal)
@@ -125,7 +127,7 @@ extension PostTableViewCell {
         fullContent = "\(postData.name) \(postData.content)"
 
         profileImageView.image = UIImage(named: postData.profileImageName)
-        postIamgeView.image = UIImage(named: postData.postImageName)
+//        postIamgeView.image = UIImage(named: postData.postImageName)
         
         commentNumButton.setTitle("댓글 \(postData.commentNum)개 모두 보기", for: .normal)
         
@@ -158,7 +160,7 @@ extension PostTableViewCell {
         buttonView.addSubviews([likeButton, commentButton, shareButton, bookmarkButton])
         bottomView.addSubviews([likeNumLabel, contentLabel, commentNumButton])
         
-        contentView.addSubviews([topView, postIamgeView, buttonView, bottomView])
+        contentView.addSubviews([topView, postImageView, buttonView, bottomView])
     }
     
     func constraints() {
@@ -185,13 +187,13 @@ extension PostTableViewCell {
             make.size.equalTo(24)
         }
         
-        postIamgeView.snp.makeConstraints { make in
+        postImageView.snp.makeConstraints { make in
             make.top.equalTo(topView.snp.bottom)
             make.leading.trailing.equalToSuperview()
         }
         
         buttonView.snp.makeConstraints { make in
-            make.top.equalTo(postIamgeView.snp.bottom)
+            make.top.equalTo(postImageView.snp.bottom)
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(40)
         }

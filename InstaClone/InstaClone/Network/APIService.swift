@@ -28,7 +28,31 @@ struct APIService {
     func login(email: String, password: String, completion: @escaping (NetworkResult<LoginData>) -> Void) {
 
         let target: APITarget = .login(email: email, password: password)
-       requestResultData(target, completion: completion)
+        requestResultData(target, completion: completion)
+    }
+    
+    func getRandomImage(completion: @escaping (NetworkResult<PhotoData>) -> Void) {
+        
+        // 코드 통일 soon...
+        let target: APITarget = .getRandomImage
+        provider.request(target) { result in
+            
+            switch result {
+            case .success(let response):
+                switch response.statusCode {
+                case HTTPStatusCode.SERVER_ERROR.rawValue:
+                    completion(.serverErr)
+                default:
+                    guard let decodedData = try? JSONDecoder().decode(PhotoData.self, from: response.data) else {
+                        return completion(.pathErr)
+                    }
+                    completion(.success(decodedData))
+                }
+            case .failure(let err):
+                print(err)
+                completion(.networkFail)
+            }
+        }
     }
 }
 

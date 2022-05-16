@@ -7,13 +7,19 @@
 
 import RxSwift
 import UIKit
+import RxSwift
+import RxCocoa
 
-class FeedViewController: BaseViewController {
+class FeedViewController: UIViewController {
     
     let mainView = FeedView()
     let viewModel = FeedViewModel()
+    let disposeBag = DisposeBag()
+    
+    // MARK: - 사진 데이터
+    var photoData: [String] = []
 
-    // 네비게이션 아이템 여기서 만들어주는게 괜찮은 방법일까 ? 네비게이션, 탭바 관리하는 방법 공부하기
+    // MARK: - 네비게이션 바 버튼 아이템
     let instagramButton = UIButton().then {
         $0.setImage(UIImage(named: "logo_instagram_small"), for: .normal)
         $0.setTitleColor(.black, for: .normal)
@@ -31,23 +37,29 @@ class FeedViewController: BaseViewController {
     override func loadView() {
         super.view = mainView
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getRandomImage()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        binding()
         configureUI()
     }
     
-    override func configureUI() {
+    func configureUI() {
         
         navigationController?.addBarButtonItems(navigationItem: self.navigationItem, buttonArray: [addFeedButton, checkLikeButton, messageButton])
         
         navigationController?.addBarButtonItems(navigationItem: self.navigationItem, buttonArray: [instagramButton], isRight: false)
     }
     
-    override func binding() {
+    func binding() {
         
-        Observable.of(PostModel.sampleData).bind(to: mainView.feedTableView.rx.items) { [unowned self] (tableView, row, element) -> UITableViewCell in
+        Observable.of(PostModel.sampleData).bind(to: mainView.feedTableView.rx.items) { (tableView, row, element) -> UITableViewCell in
                 
                 switch row {
                 case 0:
@@ -57,9 +69,16 @@ class FeedViewController: BaseViewController {
                     
                 default:
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier, for: IndexPath.init(row: row, section: 0)) as? PostTableViewCell else { return UITableViewCell() }
-
+                    
                     
                     cell.setData(element)
+                    // photoData set 보다 디큐가 먼저 되어 첫화면에 사진 안뜸
+                    if self.photoData != [] {
+                        DispatchQueue.main.async {
+                            cell.postImageView.setKFImage(from: self.photoData[row])
+                        }
+                    }
+
                     return cell
                 }
             }
@@ -67,6 +86,28 @@ class FeedViewController: BaseViewController {
         
         mainView.feedTableView.rx.setDelegate(self)
             .disposed(by: disposeBag)
+    }
+}
+
+// MARK: - 이미지 서버통신
+extension FeedViewController {
+    
+    func getRandomImage() {
+        APIService.shared.getRandomImage { [weak self] result in
+            switch result {
+            case .success(let response):
+                self?.photoData = response.map { $0.download_url }
+                self?.mainView.feedTableView.reloadData()
+            case .requestErr(_):
+                print("리퀘스트 에러")
+            case .networkFail:
+                print("네트워크 통신 실패 alert")
+            case .serverErr:
+                print("서버에러")
+            case .pathErr:
+                print("에러")
+            }
+        }
     }
 }
 

@@ -15,7 +15,7 @@ class FeedView: BaseView {
         $0.separatorColor = .clear
         $0.showsVerticalScrollIndicator = false
         $0.rowHeight = UITableView.automaticDimension
-        $0.estimatedRowHeight = 400
+        $0.estimatedRowHeight = 300
         $0.register(StoryCollectionTableViewCell.self, forCellReuseIdentifier: StoryCollectionTableViewCell.identifier)
         $0.register(PostTableViewCell.self, forCellReuseIdentifier: PostTableViewCell.identifier)
     }

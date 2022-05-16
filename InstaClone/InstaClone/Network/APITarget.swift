@@ -11,12 +11,19 @@ import Moya
 enum APITarget {
     case signup(email: String, name: String, password: String)
     case login(email: String, password: String)
+    case getRandomImage
 }
 
 extension APITarget: TargetType {
     
     var baseURL: URL {
-        return URL(string: APIConstants.baseURL)!
+        switch self {
+        case .signup, .login:
+            return URL(string: APIConstants.baseURL)!
+        case .getRandomImage:
+            return URL(string: APIConstants.picsumURL)!
+            
+        }
     }
     
     var path: String {
@@ -25,6 +32,8 @@ extension APITarget: TargetType {
             return APIConstants.signupPath
         case .login:
             return APIConstants.loginPath
+        case .getRandomImage:
+            return APIConstants.randomImagePath
         }
     }
     
@@ -32,6 +41,8 @@ extension APITarget: TargetType {
         switch self {
         case .signup, .login:
             return .post
+        case .getRandomImage:
+            return .get
         }
     }
     
@@ -46,12 +57,14 @@ extension APITarget: TargetType {
             return .requestParameters(parameters: ["email": email, "name": name, "password": password], encoding: JSONEncoding.default)
         case .login(let email, let password):
             return .requestParameters(parameters: ["email": email, "password": password], encoding: JSONEncoding.default)
+        case .getRandomImage:
+            return .requestParameters(parameters: ["limit": 7], encoding: URLEncoding.queryString)
         }
     }
     
     var headers: [String : String]? {
         switch self {
-        case .signup(_,_,_), .login(_,_):
+        case .signup(_,_,_), .login(_,_), .getRandomImage:
             return ["Content-Type" : "application/json"]
         }
     }
