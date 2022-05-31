@@ -8,6 +8,7 @@
 class SignupPwdViewController: BaseViewController {
     
     let mainView = SignupPwdView()
+    let httpViewModel = SignupHttpViewModel()
 
     var userId: String = ""
     
@@ -35,11 +36,31 @@ class SignupPwdViewController: BaseViewController {
         
         mainView.nextButton.rx.tap
             .subscribe { [weak self] _ in
-                let vc = SignupDoneViewController()
-                vc.modalPresentationStyle = .fullScreen
-                vc.userId = self?.userId ?? ""
-                self?.present(vc, animated: true, completion: nil)
+                self?.signup()
             }
             .disposed(by: disposeBag)
+    }
+}
+
+extension SignupPwdViewController {
+    
+    func signup() {
+        self.httpViewModel.signup(emailAndName: userId,
+                                   password: (self.mainView.userPwdTextField.text)!) { response in
+            
+            if let response = response as? SignupData {
+                
+                let vc = SignupDoneViewController()
+                vc.modalPresentationStyle = .fullScreen
+                vc.userId = self.userId
+                self.present(vc, animated: true, completion: nil)
+                
+                print(response)
+            }
+            
+            if let message = response as? String {
+                print(message)
+            }
+        }
     }
 }

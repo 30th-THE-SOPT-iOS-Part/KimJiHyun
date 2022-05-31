@@ -11,7 +11,7 @@ struct PostModel {
     
     let profileImageName: String
     let name: String
-    let postImageName: String
+    var postImageName: String
     let likeNum: Int
     let content: String
     let commentNum: Int
@@ -20,7 +20,7 @@ struct PostModel {
 
 extension PostModel {
     
-    static let sampleData: [PostModel] = [
+    static var sampleData: [PostModel] = [
         
         // cell row 첫번째에 collectionView를 넣는 바람에
         // 두번째 cell row 부터 시작하는 피드가 되어, 두번째 data가 첫번째 피드에 들어가게 되는 issue

@@ -44,12 +44,6 @@ final class SignupDoneView: UIView {
         $0.setTitle("완료하기", for: .normal)
         $0.isEnabled = true
     }
-    
-    var loginOtherAccountButton = UIButton().then {
-        $0.setTitle("다른 계정으로 로그인하기", for: .normal)
-        $0.setTitleColor(.systemBlue, for: .normal)
-        $0.titleLabel?.font = .systemFont(ofSize: 14)
-    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -68,7 +62,7 @@ final class SignupDoneView: UIView {
         
         
         
-        [guideStackView, doneButton, loginOtherAccountButton].forEach { self.addSubview($0) }
+        [guideStackView, doneButton].forEach { self.addSubview($0) }
         [welcomeGuideLabel, welcomeSubGuideLabel].forEach { guideStackView.addArrangedSubview($0) }
     }
     
@@ -84,11 +78,6 @@ final class SignupDoneView: UIView {
             make.top.equalTo(guideStackView.snp.bottom).offset(24)
             make.height.equalTo(50)
             make.leading.trailing.equalToSuperview().inset(16)
-        }
-        
-        loginOtherAccountButton.snp.makeConstraints { make in
-            make.top.equalTo(doneButton.snp.bottom).offset(24)
-            make.centerX.equalToSuperview()
         }
     }
 }
