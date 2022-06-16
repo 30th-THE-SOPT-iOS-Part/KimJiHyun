@@ -8,7 +8,7 @@
    
 
 
-## Extension NSMutableAttributedString
+# Extension NSMutableAttributedString
 
 
 
@@ -69,7 +69,7 @@ var fullContent: String = "" {
 
  
 
-## GestureRecognizer&TextKit 으로 UILabel text 클릭 이벤트 발생시키기
+# GestureRecognizer&TextKit 으로 UILabel text 클릭 이벤트 발생시키기
 
 
 
