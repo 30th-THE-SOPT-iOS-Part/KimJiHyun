@@ -14,7 +14,7 @@ class BaseView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+
         setUp()
         configureUI()
         constraints()

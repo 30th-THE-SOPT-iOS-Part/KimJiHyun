@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B85E9CF428350C9100B81D36 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85E9CF328350C9100B81D36 /* TextFieldView.swift */; };
+		B85E9CF628350C9900B81D36 /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85E9CF528350C9900B81D36 /* TextFieldViewController.swift */; };
+		B85E9CF828350CA900B81D36 /* TextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85E9CF728350CA900B81D36 /* TextFieldViewModel.swift */; };
+		B85E9CFB28350CC400B81D36 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B85E9CFA28350CC400B81D36 /* SnapKit */; };
+		B85E9CFD28351CF200B81D36 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85E9CFC28351CF200B81D36 /* UITextField+.swift */; };
+		B85E9D0028351DCE00B81D36 /* AnyFormatKit in Frameworks */ = {isa = PBXBuildFile; productRef = B85E9CFF28351DCE00B81D36 /* AnyFormatKit */; };
 		B894E121282B801C0017FF31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B894E120282B801C0017FF31 /* AppDelegate.swift */; };
 		B894E123282B801C0017FF31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B894E122282B801C0017FF31 /* SceneDelegate.swift */; };
 		B894E125282B801C0017FF31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B894E124282B801C0017FF31 /* ViewController.swift */; };
@@ -26,6 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B85E9CF328350C9100B81D36 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		B85E9CF528350C9900B81D36 /* TextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
+		B85E9CF728350CA900B81D36 /* TextFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewModel.swift; sourceTree = "<group>"; };
+		B85E9CFC28351CF200B81D36 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		B894E11D282B801C0017FF31 /* Rx_Server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rx_Server.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B894E120282B801C0017FF31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B894E122282B801C0017FF31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,15 +58,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8BE488A282B907800E3FB82 /* RxSwift in Frameworks */,
+				B85E9D0028351DCE00B81D36 /* AnyFormatKit in Frameworks */,
 				B8BE4888282B907800E3FB82 /* RxCocoa in Frameworks */,
 				B8BE4891282B969000E3FB82 /* RxMoya in Frameworks */,
 				B8BE488F282B969000E3FB82 /* Moya in Frameworks */,
+				B85E9CFB28350CC400B81D36 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B85E9CF228350C8400B81D36 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				B85E9CF328350C9100B81D36 /* TextFieldView.swift */,
+				B85E9CF528350C9900B81D36 /* TextFieldViewController.swift */,
+				B85E9CF728350CA900B81D36 /* TextFieldViewModel.swift */,
+				B85E9CFC28351CF200B81D36 /* UITextField+.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
 		B894E114282B801C0017FF31 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +99,7 @@
 		B894E11F282B801C0017FF31 /* Rx_Server */ = {
 			isa = PBXGroup;
 			children = (
+				B85E9CF228350C8400B81D36 /* TextField */,
 				B894E139282B83390017FF31 /* Resource */,
 				B894E138282B83330017FF31 /* Controller */,
 				B894E137282B832E0017FF31 /* Network */,
@@ -162,6 +186,8 @@
 				B8BE4889282B907800E3FB82 /* RxSwift */,
 				B8BE488E282B969000E3FB82 /* Moya */,
 				B8BE4890282B969000E3FB82 /* RxMoya */,
+				B85E9CFA28350CC400B81D36 /* SnapKit */,
+				B85E9CFF28351DCE00B81D36 /* AnyFormatKit */,
 			);
 			productName = Rx_Server;
 			productReference = B894E11D282B801C0017FF31 /* Rx_Server.app */;
@@ -194,6 +220,8 @@
 			packageReferences = (
 				B8BE4886282B907800E3FB82 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				B8BE488D282B969000E3FB82 /* XCRemoteSwiftPackageReference "Moya" */,
+				B85E9CF928350CC400B81D36 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				B85E9CFE28351DCE00B81D36 /* XCRemoteSwiftPackageReference "AnyFormatKit" */,
 			);
 			productRefGroup = B894E11E282B801C0017FF31 /* Products */;
 			projectDirPath = "";
@@ -223,11 +251,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B894E13B282B83780017FF31 /* APIConstants.swift in Sources */,
+				B85E9CFD28351CF200B81D36 /* UITextField+.swift in Sources */,
 				B8BE4883282B8BAB00E3FB82 /* APIService.swift in Sources */,
 				B894E125282B801C0017FF31 /* ViewController.swift in Sources */,
 				B894E121282B801C0017FF31 /* AppDelegate.swift in Sources */,
 				B894E145282B8A990017FF31 /* NetworkResult.swift in Sources */,
 				B894E143282B86530017FF31 /* APITarget.swift in Sources */,
+				B85E9CF428350C9100B81D36 /* TextFieldView.swift in Sources */,
+				B85E9CF628350C9900B81D36 /* TextFieldViewController.swift in Sources */,
+				B85E9CF828350CA900B81D36 /* TextFieldViewModel.swift in Sources */,
 				B8BE488C282B93C000E3FB82 /* HTTPStatusCode.swift in Sources */,
 				B8BE4885282B8DC200E3FB82 /* ResponseModel.swift in Sources */,
 				B894E123282B801C0017FF31 /* SceneDelegate.swift in Sources */,
@@ -452,6 +484,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B85E9CF928350CC400B81D36 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		B85E9CFE28351DCE00B81D36 /* XCRemoteSwiftPackageReference "AnyFormatKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/luximetr/AnyFormatKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		B8BE4886282B907800E3FB82 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
@@ -471,6 +519,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B85E9CFA28350CC400B81D36 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B85E9CF928350CC400B81D36 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		B85E9CFF28351DCE00B81D36 /* AnyFormatKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B85E9CFE28351DCE00B81D36 /* XCRemoteSwiftPackageReference "AnyFormatKit" */;
+			productName = AnyFormatKit;
+		};
 		B8BE4887282B907800E3FB82 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B8BE4886282B907800E3FB82 /* XCRemoteSwiftPackageReference "RxSwift" */;
