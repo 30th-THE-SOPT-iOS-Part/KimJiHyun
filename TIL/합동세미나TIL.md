@@ -11,9 +11,9 @@
 
 |                          뷰 이미지                           |                 뷰 설명                  | 뷰 담당  |
 | :----------------------------------------------------------: | :--------------------------------------: | :------: |
-| <img src="https://user-images.githubusercontent.com/59338503/174252161-9f9c30cb-1209-46ca-be14-e00963b42a76.png" style="zoom:33%;" /> |  업로드 된 판매글 목록 뷰 & 탭바 커스텀  |   정빈   |
-| <img src="https://user-images.githubusercontent.com/59338503/174252531-91185e27-7865-42ac-a250-e1c01e5bb7b6.png" style="zoom:33%;" /> | **판매글 작성 뷰 & 네비게이션바 커스텀** | **지현** |
-| <img src="https://user-images.githubusercontent.com/59338503/174252267-c2f2222a-8ab5-4288-b83e-90c06be25b72.png" style="zoom:33%;" /> |        사진 업류드 이미지 피커 뷰        |   윤휘   |
+| <img src="https://user-images.githubusercontent.com/59338503/174252161-9f9c30cb-1209-46ca-be14-e00963b42a76.png" width="200" /> |  업로드 된 판매글 목록 뷰 & 탭바 커스텀  |   정빈   |
+| <img src="https://user-images.githubusercontent.com/59338503/174252531-91185e27-7865-42ac-a250-e1c01e5bb7b6.png" width="200" /> | **판매글 작성 뷰 & 네비게이션바 커스텀** | **지현** |
+| <img src="https://user-images.githubusercontent.com/59338503/174252267-c2f2222a-8ab5-4288-b83e-90c06be25b72.png" width="200" /> |        사진 업류드 이미지 피커 뷰        |   윤휘   |
 
 &nbsp;
 
