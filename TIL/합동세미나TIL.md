@@ -5,11 +5,9 @@
 - 해결했던 이슈
 - 협업을 하면서 느낀점
 
-   
+&nbsp;
 
 ## 작업 분배
-
-  
 
 |                          뷰 이미지                           |                 뷰 설명                  | 뷰 담당  |
 | :----------------------------------------------------------: | :--------------------------------------: | :------: |
@@ -17,31 +15,22 @@
 | <img src="/Users/kimjihyeon/Library/Application Support/typora-user-images/스크린샷 2022-06-17 오후 3.18.17.png" alt="스크린샷 2022-06-17 오후 3.18.17" style="zoom:33%;" /> | **판매글 작성 뷰 & 네비게이션바 커스텀** | **지현** |
 | <img src="/Users/kimjihyeon/Library/Application Support/typora-user-images/스크린샷 2022-06-17 오후 3.19.13.png" style="zoom:33%;" /> |        사진 업류드 이미지 피커 뷰        |   윤휘   |
 
-  
- 
-  
+&nbsp;
 
 ## TIL
 
-   
-
 ### 키보드에 맞춰 ScrollView Content Inset 변경하기
-
 https://teunteun2.tistory.com/16
 
-  
- 
+&nbsp;
+
 ### Collection View Cell 내부의 Button Action (tag & delegate & closure 차이점)
 https://teunteun2.tistory.com/13
 
+&nbsp;
+&nbsp;
 
- 
-
-  
- 
 ## 해결했던 이슈
-
-   
 
 ### XIB를 이용한 커스텀 뷰 만들 때 - required init?(coder:NSCoder) & awakeFromNib() 의 호출 시점
 
